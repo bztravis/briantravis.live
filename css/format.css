@@ -1,7 +1,7 @@
 :root {
     /* dimensions */
-    --bodyPadding: 64px;
-    --navBarWidth: 300px;
+    --bodyPadding: 56px;
+    --navBarWidth: 260px;
     /* --photoWidth: calc() */
 }
 
@@ -20,6 +20,7 @@ body {
 #navBar {
     width: var(--navBarWidth);
     height: calc(100vh - 2 * var(--bodyPadding));
+    position: relative;
 }
 
 #contentContainer {
@@ -29,4 +30,5 @@ body {
     top: var(--bodyPadding);
     right: var(--bodyPadding);
     background: var(--cardBG);
+    border-radius: 4px;
 }

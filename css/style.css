@@ -37,7 +37,11 @@
 
     /* text sizes */
     --titleTextSize: 36pt;
-    --navLinkSize: 14pt;
+    --navLinkTextSize: 14pt;
+    --footerDetailTextSize: 10pt;
+
+    /* icon sizes */
+    --footerDetailIconSize: 18px;
 }
 
 * {
@@ -50,6 +54,8 @@
 #titleText {
     margin: 0;
     padding: 0;
+    position: relative;
+    top: -4px;
     font-family: 'Glamour Luxury Round';
     font-weight: normal;
     font-size: var(--titleTextSize);
@@ -61,19 +67,60 @@
 }
 
 #navLinkList {
-    margin: 36px 0px 0px 0px;
+    margin: 32px 0px 0px 0px;
     padding: 0;
     list-style: none;
     font-family: 'Inter Light';
     font-weight: lighter;
-    font-size: var(--navLinkSize);
+    font-size: var(--navLinkTextSize);
 }
 
 #navLinkList > li {
-    margin: 0px 0px 10px 0px;
+    margin: 0px 0px 12px 0px;
 }
 
 .navLink {
     color: var(--heavyTextColor);
     text-decoration: none;
+}
+
+#footerDetailList {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    list-style: none;
+}
+
+#footerDetailList > li {
+    margin: 0px 0px 8px 0px;
+}
+
+.footerDetail {
+    margin: 0;
+    padding: 0;
+    display: ineline;
+    font-family: 'Inter Medium';
+    font-size: var(--footerDetailTextSize);
+    color: var(--mediumTextColor);
+    text-decoration: none;
+    font-weight: normal;
+}
+
+.hasIcon {
+    margin: 0px 0px 0px calc(var(--footerDetailIconSize) + 8px) !important;
+}
+
+.footerIcon {
+    width: var(--footerDetailIconSize);
+    height: var(--footerDetailIconSize);
+    position: relative;
+}
+
+.footerIcon > img {
+    width: var(--footerDetailIconSize);
+    position: absolute;
+    top: 0px;
+    display: inline;
 }
