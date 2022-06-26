@@ -1,0 +1,26 @@
+:root {
+    /* BG colors */
+    --bodyBG: #101010;
+    --cardBG: #1a1a1a;
+    --modalBG: #ffffff;
+
+    /* text colors */
+    --heavyTextColor: #c0c0c0;
+    --mediumTextColor: #606060;
+    --cardLightTextColor: #a0a0a0;   
+
+    /* text sizes */
+    --titleTextSize: 36pt;
+    --navLinkTextSize: 14pt;
+    --footerDetailTextSize: 10pt;
+
+    /* icon sizes */
+    --footerDetailIconSize: 18px;
+}
+
+
+
+
+#contentContainer {
+    background: var(--cardBG);
+}

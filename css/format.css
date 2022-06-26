@@ -1,7 +1,17 @@
+/* @property --floor {
+    syntax: '<integer>';
+    initial-value: 0;
+    inherits: false
+} */
+
 :root {
     /* dimensions */
     --bodyPadding: 56px;
     --navBarWidth: 260px;
+    --contentContainerWidth: calc(100vw - 3 * var(--bodyPadding) - var(--navBarWidth));
+    --contentContainerHeight: calc(100vh - 2 * var(--bodyPadding));
+    --cardHeight: calc(var(--contentContainerHeight) / 2 - 4px);
+    --cardBorderRadius: 4px;
     /* --photoWidth: calc() */
 }
 
@@ -24,11 +34,39 @@ body {
 }
 
 #contentContainer {
-    width: calc(100vw - 3 * var(--bodyPadding) - var(--navBarWidth));
-    height: calc(100vh - 2 * var(--bodyPadding));
+    width: var(--contentContainerWidth);
+    height: calc(var(--contentContainerHeight) + 8px);
     position: fixed;
     top: var(--bodyPadding);
     right: var(--bodyPadding);
+    /* background: var(--cardBG); */
+    border-bottom: 8px solid var(--bodyBG);
+    overflow: scroll;
+    scroll-snap-type: y mandatory;
+}
+
+.flexContainer {
+    width: var(--contentContainerWidth);
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: absolute;
+    right: 0px;
+}
+
+#justificationContainer {
+    position: relative;
+    /* right: - calc() */
+}
+
+.card {
+    width: calc(var(--cardHeight) / 3 * 2);
+    height: var(--cardHeight); 
+    margin: 0px 0px 8px 8px;
+    padding: 0;
+    display: inline-block;
+    border-radius: var(--cardBorderRadius);
     background: var(--cardBG);
-    border-radius: 4px;
+    scroll-snap-align: end;
 }

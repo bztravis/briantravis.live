@@ -32,7 +32,7 @@
 
     /* text colors */
     --heavyTextColor: #303030;
-    --mediumTextColor: #bababa;
+    --mediumTextColor: #c0c0c0;
     --cardLightTextColor: #606060;   
 
     /* text sizes */
@@ -42,6 +42,18 @@
 
     /* icon sizes */
     --footerDetailIconSize: 18px;
+
+    /* misc */
+    
+}
+
+::selection {
+    background: var(--cardLightTextColor);
+    color: var(--bodyBG);
+}
+
+::-webkit-scrollbar {
+    /* display: none; */
 }
 
 * {
@@ -108,8 +120,9 @@
     font-weight: normal;
 }
 
-.hasIcon {
+.footerDetail.hasIcon {
     margin: 0px 0px 0px calc(var(--footerDetailIconSize) + 8px) !important;
+    user-select: text;
 }
 
 .footerIcon {
@@ -123,4 +136,5 @@
     position: absolute;
     top: 0px;
     display: inline;
+    -webkit-user-drag: none;
 }
