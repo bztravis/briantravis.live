@@ -1,0 +1,32 @@
+:root {
+    /* dimensions */
+    --bodyPadding: 64px;
+    --navBarWidth: 300px;
+    /* --photoWidth: calc() */
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: var(--bodyPadding);
+    background: var(--bodyBG);   
+}
+
+#navBar {
+    width: var(--navBarWidth);
+    height: calc(100vh - 2 * var(--bodyPadding));
+}
+
+#contentContainer {
+    width: calc(100vw - 3 * var(--bodyPadding) - var(--navBarWidth));
+    height: calc(100vh - 2 * var(--bodyPadding));
+    position: fixed;
+    top: var(--bodyPadding);
+    right: var(--bodyPadding);
+    background: var(--cardBG);
+}

@@ -1,0 +1,79 @@
+@font-face {
+    font-family: Glamour Luxury Regular;
+    src: url(../fonts/glamourluxury-Regular.ttf);
+}
+
+@font-face {
+    font-family: Glamour Luxury Round;
+    src: url(../fonts/glamourluxury-Round.ttf);
+}
+
+@font-face {
+    font-family: Inter Light;
+    src: url(../fonts/Inter-Light.ttf);
+}
+
+@font-face {
+    font-family: Inter Medium;
+    src: url(../fonts/Inter-Medium.ttf);
+}
+
+@font-face {
+    font-family: Inter Bold;
+    src: url(../fonts/Inter-Bold.ttf);
+}
+
+
+:root {
+    /* BG colors */
+    --bodyBG: #fafafa;
+    --cardBG: #f0f0f0;
+    --modalBG: #ffffff;
+
+    /* text colors */
+    --heavyTextColor: #303030;
+    --mediumTextColor: #bababa;
+    --cardLightTextColor: #606060;   
+
+    /* text sizes */
+    --titleTextSize: 36pt;
+    --navLinkSize: 14pt;
+}
+
+* {
+    user-select: none;
+}
+
+
+
+
+#titleText {
+    margin: 0;
+    padding: 0;
+    font-family: 'Glamour Luxury Round';
+    font-weight: normal;
+    font-size: var(--titleTextSize);
+    color: var(--heavyTextColor);
+}
+
+#navBar {
+    background: var(--bodyBG);
+}
+
+#navLinkList {
+    margin: 36px 0px 0px 0px;
+    padding: 0;
+    list-style: none;
+    font-family: 'Inter Light';
+    font-weight: lighter;
+    font-size: var(--navLinkSize);
+}
+
+#navLinkList > li {
+    margin: 0px 0px 10px 0px;
+}
+
+.navLink {
+    color: var(--heavyTextColor);
+    text-decoration: none;
+}
