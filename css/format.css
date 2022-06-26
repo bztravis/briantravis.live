@@ -1,9 +1,3 @@
-/* @property --floor {
-    syntax: '<integer>';
-    initial-value: 0;
-    inherits: false
-} */
-
 :root {
     /* dimensions */
     --bodyPadding: 56px;
@@ -13,6 +7,24 @@
     --cardHeight: calc(var(--contentContainerHeight) / 2 - 4px);
     --cardBorderRadius: 4px;
     /* --photoWidth: calc() */
+}
+
+::-webkit-scrollbar {
+    width: 0;
+    display: none;
+}
+::-webkit-scrollbar-track {
+    display: none;
+}
+::-webkit-scrollbar-thumb {
+    background: none;
+    border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #c0c0c0;
+}
+::-webkit-scrollbar-thumb:active {
+    background: #606060;
 }
 
 * {
@@ -41,19 +53,28 @@ body {
     right: var(--bodyPadding);
     /* background: var(--cardBG); */
     border-bottom: 8px solid var(--bodyBG);
-    overflow: scroll;
+    overflow-y: scroll;
     scroll-snap-type: y mandatory;
 }
 
+#relativeContainer {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    /* background: #603843; */
+}
+
 .flexContainer {
-    width: var(--contentContainerWidth);
-    display: inline-flex;
+    /* width: var(--contentContainerWidth); */
+    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: left;
     position: absolute;
     right: 0px;
 }
+
+.flexContainerFormat
 
 #justificationContainer {
     position: relative;

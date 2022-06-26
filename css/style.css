@@ -52,10 +52,6 @@
     color: var(--bodyBG);
 }
 
-::-webkit-scrollbar {
-    /* display: none; */
-}
-
 * {
     user-select: none;
 }
