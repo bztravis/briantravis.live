@@ -5,7 +5,7 @@
     --contentContainerWidth: calc(100vw - 3 * var(--bodyPadding) - var(--navBarWidth));
     --contentContainerHeight: calc((100 * var(--vh)) - 2 * var(--bodyPadding));
     --cardHeight: calc(var(--contentContainerHeight) / 2 - 4px);
-    --cardBorderRadius: 4px;
+    --cardBorderRadius: 0.4vh;
 }
 
 ::-webkit-scrollbar {
