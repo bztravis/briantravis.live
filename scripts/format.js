@@ -15,7 +15,7 @@ function format() {
     let cardCount = Math.floor(contentContainerWidth / (cardWidth + 8)) 
     // console.log(cardCount);
     // alert(cardCount)
-    let flexContainerWidth = contentContainerWidth - (contentContainerWidth % (cardWidth + 8))
+    let flexContainerWidth = contentContainerWidth - (contentContainerWidth % (cardWidth + 8)) + 4  // 4 px error tolerance
     // document.getElementsByClassName('card')[0].style.width = flexContainerWidth + 'px'
     // alert(cardHeight)
     flexContainer.style.width = flexContainerWidth + 'px'
