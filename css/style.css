@@ -103,6 +103,7 @@
 
 #footerDetailList > li {
     margin: 0px 0px 8px 0px;
+    position: relative;
 }
 
 .footerDetail {
@@ -124,13 +125,12 @@
 .footerIcon {
     width: var(--footerDetailIconSize);
     height: var(--footerDetailIconSize);
-    position: relative;
+    position: absolute;
+    bottom: -1px;
 }
 
 .footerIcon > img {
     width: var(--footerDetailIconSize);
-    position: absolute;
-    top: 0px;
     display: inline;
     -webkit-user-drag: none;
 }
