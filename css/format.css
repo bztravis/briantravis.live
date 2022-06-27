@@ -31,9 +31,14 @@
     box-sizing: border-box;
 }
 
+html {
+    height: -webkit-fill-available;
+}
+
 body {
     width: 100vw;
     height: 100vh;
+    height: -webkit-fill-available;
     margin: 0;
     padding: var(--bodyPadding);
     background: var(--bodyBG);   
