@@ -39,7 +39,6 @@ document.body.onresize = () => { format() }
 
 if (window.innerWidth < 600) {
     alert('format() error')
-    return
 }
 
 // alert("resizing")
