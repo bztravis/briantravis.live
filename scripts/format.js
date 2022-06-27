@@ -31,5 +31,4 @@ function format() {
 }
 
 format()
-// document.body.onresize = () => { format() }
-setInterval(() => {format()}, 1000)
+document.body.onresize = () => { format() }

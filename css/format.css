@@ -42,7 +42,7 @@ body {
 #navBar {
     width: var(--navBarWidth);
     height: calc(100vh - 2 * var(--bodyPadding));
-    position: relative;
+    position: fixed;
 }
 
 #contentContainer {
