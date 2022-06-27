@@ -32,3 +32,8 @@ function format() {
 
 format()
 document.body.onresize = () => { format() }
+
+
+setInterval(() => {
+    document.getElementsByTagName('h1')[0].innerHTML = window.innerHeight
+}, 10);

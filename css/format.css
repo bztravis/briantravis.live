@@ -47,12 +47,12 @@ body {
 
 #contentContainer {
     width: var(--contentContainerWidth);
-    height: calc(var(--contentContainerHeight) + 8px);
+    height: var(--contentContainerHeight);
     position: fixed;
     top: var(--bodyPadding);
     right: var(--bodyPadding);
     /* background: var(--cardBG); */
-    border-bottom: 8px solid var(--bodyBG);
+    /* border-bottom: 8px solid var(--bodyBG); */
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
 }
