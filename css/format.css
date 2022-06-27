@@ -8,8 +8,8 @@ html {
 
 body {
     width: 100vw;
-    height: 100vh;
-    height: -webkit-fill-available;
+    height: calc(var(--vh, 1px) * 100);
+    /* height: -webkit-fill-available; */
     margin: 0;
     padding: var(--bodyPadding);
     background: var(--bodyBG);   
@@ -23,10 +23,9 @@ body {
     --bodyPadding: 56px;
     --navBarWidth: 260px;
     --contentContainerWidth: calc(100vw - 3 * var(--bodyPadding) - var(--navBarWidth));
-    --contentContainerHeight: calc(100vh - 2 * var(--bodyPadding));
+    --contentContainerHeight: calc((100 * var(--vh)) - 2 * var(--bodyPadding));
     --cardHeight: calc(var(--contentContainerHeight) / 2 - 4px);
     --cardBorderRadius: 4px;
-    /* --photoWidth: calc() */
 }
 
 ::-webkit-scrollbar {
