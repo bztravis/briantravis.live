@@ -36,4 +36,7 @@ document.body.onresize = () => { format() }
 
 setInterval(() => {
     document.getElementsByTagName('h1')[0].innerHTML = window.innerHeight
+    document.getElementsByTagName('h3')[0].innerHTML = cardCount
+    document.getElementsByTagName('h3')[1].innerHTML = 'cardWidth' + cardWidth
+    document.getElementsByTagName('h3')[2].innerHTML = 'flexContWidth' + flexContainerWidth
 }, 10);
