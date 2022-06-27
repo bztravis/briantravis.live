@@ -1,6 +1,9 @@
 function format() {
 
-    if (window.innerWidth < 600) { return }
+    if (window.innerWidth < 600) {
+        alert('format() error')
+        return
+    }
 
     // alert("resizing")
 
