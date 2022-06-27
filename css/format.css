@@ -39,7 +39,8 @@ body {
     /* height: -webkit-fill-available; */
     margin: 0;
     padding: var(--bodyPadding);
-    background: var(--bodyBG);   
+    background: var(--bodyBG);
+    overflow: hidden;
 }
 
 
