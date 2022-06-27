@@ -50,6 +50,7 @@ body {
     width: var(--navBarWidth);
     height: calc((100 * var(--vh)) - 2 * var(--bodyPadding));
     position: fixed;
+    z-index: 1;
 }
 
 #contentContainer {

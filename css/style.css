@@ -77,10 +77,12 @@
 #navLinkList {
     margin: 32px 0px 0px 0px;
     padding: 0;
+    position: relative;
     list-style: none;
     font-family: 'Inter Light';
     font-weight: lighter;
     font-size: var(--navLinkTextSize);
+    z-index: 2;
 }
 
 #navLinkList > li {
