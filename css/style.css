@@ -70,8 +70,8 @@
     color: var(--heavyTextColor);
 }
 
-#logoLink {
-    text-decoration: none;
+#titleText:hover {
+    cursor: pointer;
 }
 
 #navBar {
