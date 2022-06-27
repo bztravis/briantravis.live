@@ -70,6 +70,10 @@
     color: var(--heavyTextColor);
 }
 
+#logoLink {
+    text-decoration: none;
+}
+
 #navBar {
     background: var(--bodyBG);
 }
