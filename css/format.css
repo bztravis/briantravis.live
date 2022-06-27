@@ -47,7 +47,7 @@ body {
 
 #navBar {
     width: var(--navBarWidth);
-    height: calc((100 * var(--vh, 1vh)) - 2 * var(--bodyPadding));
+    height: calc((100 * var(--vh)) - 2 * var(--bodyPadding));
     position: fixed;
 }
 
