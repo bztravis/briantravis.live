@@ -1,7 +1,7 @@
 function format() {
 
     if (window.innerWidth < 600) {
-        alert('format() error')
+        // alert('format() error')
         return
     }
 
