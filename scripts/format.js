@@ -22,7 +22,7 @@ function format() {
     // alert(cardCount)
 
     // let flexContainerWidth = contentContainerWidth - (contentContainerWidth % (cardWidth + 8)) + 4  // 4 px error tolerance
-    let flexContainerWidth = cardCount * (cardWidth + 8)// 4 px error tolerance
+    let flexContainerWidth = cardCount * (cardWidth + 8) + 1// 4 px error tolerance
 
     // document.getElementsByClassName('card')[0].style.width = flexContainerWidth + 'px'
     // alert(cardHeight)
@@ -58,7 +58,7 @@ let cardCount = Math.floor(contentContainerWidth / (cardWidth + 8))
 // alert(cardCount)
 
 // let flexContainerWidth = contentContainerWidth - (contentContainerWidth % (cardWidth + 8)) + 4  // 4 px error tolerance
-let flexContainerWidth = cardCount * (cardWidth + 8)// 4 px error tolerance
+let flexContainerWidth = cardCount * (cardWidth + 8) + 1// 4 px error tolerance
 
 setInterval(() => {
     document.getElementsByTagName('h1')[0].innerHTML = window.innerHeight
