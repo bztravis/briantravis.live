@@ -110,11 +110,8 @@ body {
     border-radius: calc(var(--bodyPadding) / 2);
     background: #ffffff;
     opacity: 0;
+    pointer-events: none;
     transition: opacity 0.5s;
-}
-
-#downBtn:hover {
-    cursor: pointer;
 }
 
 .btnIcon {
