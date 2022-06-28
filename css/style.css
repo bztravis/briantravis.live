@@ -143,9 +143,17 @@
 
 .contentHeading {
     margin-top: 8px;
-    margin-bottom: 16px;
+    margin-bottom: 8px;
     font-family: 'Inter Bold';
     font-size: 14pt;
+    font-weight: initial;
+    color: var(--heavyTextColor);
+}
+
+.contentParagraph {
+    margin-bottom: 36px;
+    font-family: 'Inter Light';
+    font-size: 12pt;
     font-weight: initial;
     color: var(--heavyTextColor);
 }
