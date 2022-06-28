@@ -197,7 +197,7 @@
     font-weight: initial;
     font-size: 10pt;
     background: var(--heavyTextColor);
-    color: var(--bodyBG);
+    color: var(--cardBG);
 }
 
 .pricingItemList {
