@@ -5,12 +5,6 @@ function format() {
         return
     }
 
-    // alert('resizing')
-
-    let flexContainer = document.getElementsByClassName('flexContainerFormat')[0]
-    // flexContainer.style.position = 'absolute'
-    // flexContainer.style.background = '#444'
-
     let contentContainerWidth = window.innerWidth - (3 * 56) - 260
     let contentContainerHeight = window.innerHeight - (2 * 56)
     let cardHeight = (contentContainerHeight / 2) - 4
@@ -19,31 +13,17 @@ function format() {
     let cardWidthExact = (cardHeight / 3 * 2)
     console.log('cardWidth' + cardWidth)
     let cardCount = Math.floor(contentContainerWidth / (cardWidth + 8)) 
-    // console.log(cardCount);
-    // alert(cardCount)
 
-    // let flexContainerWidth = contentContainerWidth - (contentContainerWidth % (cardWidth + 8)) + 4  // 4 px error tolerance
     let flexContainerWidth = cardCount * (cardWidth + 8) + 1// 4 px error tolerance
-    let flexContainerWidthExact = cardCount * (cardWidth + 8)
-    // if (window.innerWidth < 1000) {
-    //     flexContainerWidth += 8
-    // }
 
-    // document.getElementsByClassName('card')[0].style.width = flexContainerWidth + 'px'
-    // alert(cardHeight)
-    // flexContainer.style.width = flexContainerWidth + 'px'
-    // flexContainer.style.right = '0'
     document.documentElement.style.setProperty('--flexContainerWidth', flexContainerWidth + 'px')
-    document.documentElement.style.setProperty('--flexContainerWidthExact', flexContainerWidthExact + 'px')
-    
-    // alert(flexContainerWidth)
+    document.documentElement.style.setProperty('--cardCount', cardCount)
+    document.documentElement.style.setProperty('--cardWidthExact', cardWidthExact + 'px')
 
 
 
 
-    // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
     let vh = window.innerHeight * 0.01
-    // Then we set the value in the --vh custom property to the root of the document
     document.documentElement.style.setProperty('--vh', `${vh}px`)
 
 
@@ -77,6 +57,7 @@ function checkToggleDownBtn() {
 }
 
 
+// deprecated
 function downBtnScrollDown() {
     let contentContainer = document.querySelector('#contentContainer')
     let card = document.querySelector('.card')

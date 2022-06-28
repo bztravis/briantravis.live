@@ -31,6 +31,7 @@
 
 * {
     box-sizing: border-box;
+    scrollbar-width: none;
 }
 
 body {
@@ -106,7 +107,7 @@ body {
     height: var(--bodyPadding);
     position: fixed;
     bottom: calc(var(--bodyPadding) * 3 / 4);
-    right: calc(var(--bodyPadding) + (var(--flexContainerWidthExact) / 2) - (var(--bodyPadding) / 2));
+    right: calc( var(--flexContainerWidth) + var(--bodyPadding) - 8px - ((var(--cardCount) * (var(--cardWidthExact) + 8px) - 8px) / 2) - (var(--bodyPadding) / 2));
     border-radius: calc(var(--bodyPadding) / 2);
     background: #ffffff;
     opacity: 0;
