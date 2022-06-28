@@ -146,11 +146,11 @@
     margin-bottom: 16px;
     font-family: 'Inter Bold';
     font-size: 14pt;
-    text-decoration: none;
+    font-weight: initial;
     color: var(--heavyTextColor);
 }
 
-.pricingCardHeader {
+.pricingCardHeading {
     width: 100%;
     margin: 0;
     padding: 0;
@@ -162,7 +162,7 @@
 
 .pricingCardPrice {
     width: 100%;
-    margin: 0px 0px 18px 0px;
+    margin: 0;
     padding: 0;
     text-align: center;
     font-family: 'Glamour Luxury Regular';
@@ -182,7 +182,7 @@
 
 .pricingCardBanner {
     width: 100%;
-    margin: 0px 0px 18px 0px;
+    margin: 0px 0px 12px 0px;
     padding: 4px 8px 4px 8px;
     text-align: center;
     font-family: 'Inter Bold';
@@ -194,14 +194,16 @@
 
 .pricingItemList {
     margin: 0px 0px 36px 0px;
-    padding: 0px 72px 0px 72px;
+    padding: 0;
+    list-style-position: inside;
+    text-align: center;
 }
 
-.pricingItemList > li > p {
+.pricingItemList > li {
     margin: 0px 0px 8px 0px;
     padding: 0;
-    text-align: left;
     font-family: 'Inter Light';
     font-weight: initial;
     font-size: 12pt;
+    color: var(--cardLightTextColor);
 }
