@@ -117,7 +117,7 @@ body {
 #helpModal {
     width: 300px;
     margin: 0;
-    padding: 36px;
+    padding: 32px;
     border-radius: var(--cardBorderRadius);
     position: fixed;
     bottom: var(--bodyPadding);
