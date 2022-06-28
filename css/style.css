@@ -149,3 +149,19 @@
     text-decoration: none;
     color: var(--heavyTextColor);
 }
+
+.pricingCardHeader {
+    margin: 36px 0px 0px 0px;
+    text-align: center;
+    font-family: 'Glamour Luxury Regular';
+    font-weight: initial;
+    font-size: 28pt;
+}
+
+.pricingCardPrice {
+    margin: 0px 0px 18px 0px;
+    text-align: center;
+    font-family: 'Glamour Luxury Regular';
+    font-weight: initial;
+    font-size: 28pt;
+}
