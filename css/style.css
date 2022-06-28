@@ -172,8 +172,8 @@
 
 .pricingCardFooter {
     width: 100%;
-    margin: 18px 0px 0px 0px;
-    padding: 0px 12px 0px 12px;
+    margin: 0;
+    padding: 0px 36px 0px 36px;
     text-align: center;
     font-family: 'Glamour Luxury Regular';
     font-weight: initial;
@@ -183,11 +183,25 @@
 .pricingCardBanner {
     width: 100%;
     margin: 0px 0px 18px 0px;
-    padding: 4px 0px 4px 0px;
+    padding: 4px 8px 4px 8px;
     text-align: center;
     font-family: 'Inter Bold';
     font-weight: initial;
     font-size: 10pt;
     background: var(--heavyTextColor);
     color: var(--bodyBG);
+}
+
+.pricingItemList {
+    margin: 0px 0px 36px 0px;
+    padding: 0px 72px 0px 72px;
+}
+
+.pricingItemList > li > p {
+    margin: 0px 0px 8px 0px;
+    padding: 0;
+    text-align: left;
+    font-family: 'Inter Light';
+    font-weight: initial;
+    font-size: 12pt;
 }
