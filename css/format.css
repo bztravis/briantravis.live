@@ -109,7 +109,7 @@ body {
     flex-grow: 1;
     min-width: 200px;
     margin: 0px 0px 8px 8px;
-    padding: 0;
+    padding: 36px 0px 36px 0px;
     display: inline-block;
     border-radius: var(--cardBorderRadius);
     background: var(--cardBG);
