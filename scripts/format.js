@@ -45,6 +45,11 @@ function format() {
     let vh = window.innerHeight * 0.01
     // Then we set the value in the --vh custom property to the root of the document
     document.documentElement.style.setProperty('--vh', `${vh}px`)
+
+
+
+
+    checkToggleDownBtn()
 }
 
 format()
@@ -58,9 +63,11 @@ document.querySelector('#contentContainer').scrollTop = 0
 function checkToggleDownBtn() {
     let flexContainer = document.querySelector('.flexContainer')
     let contentContainer = document.querySelector('#contentContainer')
-    console.log(`contentContainer.scrollTop ${contentContainer.scrollTop}`);
-    console.log(`flexContainer.offsetHeight - contentContainer.offsetHeight ${flexContainer.offsetHeight - contentContainer.offsetHeight}`)
-    if ((flexContainer.offsetHeight - contentContainer.offsetHeight - 10) - contentContainer.scrollTop <= document.querySelector('.card').offsetHeight) {
+    // console.log(`contentContainer.scrollTop ${contentContainer.scrollTop}`);
+    // console.log(`flexContainer.offsetHeight - contentContainer.offsetHeight ${flexContainer.offsetHeight - contentContainer.offsetHeight}`)
+    console.log((flexContainer.offsetHeight - contentContainer.offsetHeight - 10) - contentContainer.scrollTop);
+    // console.log((flexContainer.offsetHeight - contentContainer.offsetHeight) - contentContainer.scrollTop <= document.querySelector('.card').offsetHeight);
+    if ((flexContainer.offsetHeight - contentContainer.offsetHeight) - contentContainer.scrollTop <= document.querySelector('.card').offsetHeight) {
         document.querySelector('#downBtn').style.opacity = "0"
     } else {
         document.querySelector('#downBtn').style.opacity = "1"
