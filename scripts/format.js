@@ -32,8 +32,11 @@ function format() {
 
     // PRICING
     if (document.getElementsByTagName('title')[0].innerText == 'Pricing - Brian Travis Photography') {
+
+        // width breakpoint for pricingCards
         let flexContainer = document.querySelector('.flexContainer')
         let pricingCard = document.querySelectorAll('.pricingCard')
+
         if ((flexContainerWidth / ((200 + 8))) < 3) {
             flexContainer.style.flexDirection = 'column'
             pricingCard.forEach((individCard) => {individCard.style.maxWidth = 'none'})
@@ -41,6 +44,23 @@ function format() {
             flexContainer.style.flexDirection = 'row'
             pricingCard.forEach((individCard) => {individCard.style.maxWidth = '400px'})
         }
+
+
+        // fancy centering of pricing detail ul
+        document.documentElement.style.setProperty('--pricingItemListPadding', 0 + 'px')    // must do this first so the p can expand before evaluation of its length
+
+        let longestItemListText = document.querySelector('#longestItemListText')
+        let pricingCardIndividual = document.querySelector('.pricingCard')
+        
+        let pricingCardIndividualWidth = pricingCardIndividual.offsetWidth
+        let longestItemListTextWidth = longestItemListText.offsetWidth /* + 24 */
+        let pricingItemListPadding = (pricingCardIndividualWidth - longestItemListTextWidth) / 2
+        console.log(pricingCardIndividualWidth);
+        console.log(longestItemListTextWidth);
+        console.log(pricingItemListPadding);
+
+        document.documentElement.style.setProperty('--pricingItemListPadding', pricingItemListPadding + 'px')
+
     }
 }
 
