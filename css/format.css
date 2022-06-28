@@ -12,26 +12,12 @@
     width: 0;
     display: none;
 }
-::-webkit-scrollbar-track {
-    display: none;
-}
-::-webkit-scrollbar-thumb {
-    background: none;
-    border-radius: 2px;
-}
-::-webkit-scrollbar-thumb:hover {
-    background: #c0c0c0;
-}
-::-webkit-scrollbar-thumb:active {
-    background: #606060;
-}
 
 
 
 
 * {
     box-sizing: border-box;
-    scrollbar-width: none;
 }
 
 body {
@@ -63,18 +49,16 @@ body {
     /* background: var(--cardBG); */
     /* border-bottom: 8px solid var(--bodyBG); */
     overflow-y: scroll;
+    scrollbar-width: none;
     scroll-snap-type: y mandatory;
 }
 
 #relativeContainer {
     width: 100%;
-    height: 100%;
     position: relative;
-    /* background: #603843; */
 }
 
 .flexContainer {
-    /* width: var(--contentContainerWidth); */
     width: var(--flexContainerWidth);
     display: flex;
     flex-direction: row;
@@ -82,13 +66,6 @@ body {
     justify-content: left;
     position: absolute;
     right: 0px;
-}
-
-.flexContainerFormat
-
-#justificationContainer {
-    position: relative;
-    /* right: - calc() */
 }
 
 .card {
@@ -122,3 +99,24 @@ body {
     top: calc(var(--bodyPadding) / 4);
     left: calc(var(--bodyPadding) / 4);
 }
+
+.alignWithFlexContainer {
+    width: calc(var(--flexContainerWidth) - 8px);
+    margin: 0px 0px 0px calc(var(--contentContainerWidth) - var(--flexContainerWidth) + 8px);
+}
+
+.pricingCard {
+    flex-grow: 1;
+    min-width: 200px;
+    /* max-width: 300px; */
+    height: 400px;
+    margin: 0px 0px 8px 8px;
+    padding: 0;
+    display: inline-block;
+    border-radius: var(--cardBorderRadius);
+    background: var(--cardBG);
+    /* scroll-snap-align: end; */
+}
+
+/* min width: 800px */
+/* min height: 600px */

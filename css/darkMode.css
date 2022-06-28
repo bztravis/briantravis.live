@@ -17,10 +17,3 @@
     /* icon sizes */
     --footerDetailIconSize: 18px;
 }
-
-
-
-
-#flexContainerFormat {
-    background: var(--cardBG);
-}
