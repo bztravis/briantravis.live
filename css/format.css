@@ -100,6 +100,34 @@ body {
     left: calc(var(--bodyPadding) / 4);
 }
 
+#helpBtn {
+    width: var(--bodyPadding);
+    height: var(--bodyPadding);
+    position: fixed;
+    bottom: var(--bodyPadding);
+    right: var(--bodyPadding);
+    border-radius: calc(var(--bodyPadding) / 2);
+    background: #ffffff;
+}
+
+#helpBtn:hover {
+    cursor: pointer;
+}
+
+#helpModal {
+    width: 300px;
+    margin: 0;
+    padding: 36px;
+    border-radius: var(--cardBorderRadius);
+    position: fixed;
+    bottom: var(--bodyPadding);
+    right: calc(var(--bodyPadding) * 2 + 16px);
+    opacity: 0;
+    pointer-events: none;
+    z-index: 2;
+    transition: opacity 0.2s;
+}
+
 .alignWithFlexContainer {
     width: calc(var(--flexContainerWidth) - 8px);
     margin: 0px 0px 0px calc(var(--contentContainerWidth) - var(--flexContainerWidth) + 8px);

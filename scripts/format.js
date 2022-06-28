@@ -63,12 +63,3 @@ function checkToggleDownBtn() {
         downBtn.style.opacity = '1'
     }
 }
-
-
-// deprecated
-function downBtnScrollDown() {
-    let contentContainer = document.querySelector('#contentContainer')
-    let card = document.querySelector('.card')
-
-    contentContainer.scrollTop += card.offsetHeight 
-}

@@ -207,3 +207,12 @@
     font-size: 12pt;
     color: var(--cardLightTextColor);
 }
+
+#helpModal {
+    background: #ffffff;
+    font-family: 'Inter Light';
+    font-weight: normal;
+    font-size: 14pt;
+    line-height: 150%;
+    color: var(--heavyTextColor);
+}
