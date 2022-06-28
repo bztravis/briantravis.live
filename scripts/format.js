@@ -5,7 +5,7 @@ function format() {
         return
     }
 
-    // alert("resizing")
+    // alert('resizing')
 
     let flexContainer = document.getElementsByClassName('flexContainerFormat')[0]
     // flexContainer.style.position = 'absolute'
@@ -61,15 +61,27 @@ document.body.onresize = () => { format() }
 document.querySelector('#contentContainer').scrollTop = 0
 
 function checkToggleDownBtn() {
+    let downBtn = document.querySelector('#downBtn')
     let flexContainer = document.querySelector('.flexContainer')
     let contentContainer = document.querySelector('#contentContainer')
+    let card = document.querySelector('.card')
     // console.log(`contentContainer.scrollTop ${contentContainer.scrollTop}`);
     // console.log(`flexContainer.offsetHeight - contentContainer.offsetHeight ${flexContainer.offsetHeight - contentContainer.offsetHeight}`)
     console.log((flexContainer.offsetHeight - contentContainer.offsetHeight - 10) - contentContainer.scrollTop);
     // console.log((flexContainer.offsetHeight - contentContainer.offsetHeight) - contentContainer.scrollTop <= document.querySelector('.card').offsetHeight);
-    if ((flexContainer.offsetHeight - contentContainer.offsetHeight) - contentContainer.scrollTop <= document.querySelector('.card').offsetHeight) {
-        document.querySelector('#downBtn').style.opacity = "0"
+    if ((flexContainer.offsetHeight - contentContainer.offsetHeight) - contentContainer.scrollTop <= card.offsetHeight) {
+        downBtn.style.opacity = '0'
+        downBtn.style.pointerEvents = 'none'
     } else {
-        document.querySelector('#downBtn').style.opacity = "1"
+        downBtn.style.opacity = '1'
+        downBtn.style.pointerEvents = 'initial'
     }
+}
+
+
+function downBtnScrollDown() {
+    let contentContainer = document.querySelector('#contentContainer')
+    let card = document.querySelector('.card')
+
+    contentContainer.scrollTop += card.offsetHeight
 }

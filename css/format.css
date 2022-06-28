@@ -113,6 +113,10 @@ body {
     transition: opacity 0.5s;
 }
 
+#downBtn:hover {
+    cursor: pointer;
+}
+
 .btnIcon {
     width: calc(var(--bodyPadding) / 2);
     height: calc(var(--bodyPadding) / 2);
