@@ -74,6 +74,7 @@ body {
 
 .flexContainer {
     /* width: var(--contentContainerWidth); */
+    width: var(--flexContainerWidth);
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -98,4 +99,20 @@ body {
     border-radius: var(--cardBorderRadius);
     background: var(--cardBG);
     scroll-snap-align: end;
+}
+
+#downBtn {
+    width: var(--bodyPadding);
+    height: var(--bodyPadding);
+    position: fixed;
+    bottom: calc(var(--bodyPadding) * 3 / 4);
+    right: calc(var(--bodyPadding) + (var(--flexContainerWidthExact) / 2) - (var(--bodyPadding) / 2));
+    border-radius: calc(var(--bodyPadding) / 2);
+    background: #ffffff;
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+
+.btnIcon {
+    
 }

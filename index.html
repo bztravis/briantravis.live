@@ -42,17 +42,15 @@
                     <h3 class="footerDetail hasIcon">Grand Rapids, Michigan</h3>
                 </li>
                 <li>
-                    <i class="footerIcon"></i>
                     <h3 class="footerDetail">Website by Brian Travis v0.4.2</h3>
                 </li>
                 <li>
-                    <i class="footerIcon"></i>
                     <h3 class="footerDetail">Copyright © 2022</h3>
                 </li>
             </ul>
         </footer>
     </div>
-    <div id="contentContainer">
+    <div id="contentContainer" onscroll="checkToggleDownBtn()">
         <div id="relativeContainer">
             <div class="flexContainer flexContainerFormat">
                 <div class="card"></div><div class="card"></div><div class="card"></div>
@@ -62,6 +60,9 @@
                 <div class="card"></div><div class="card"></div><div class="card"></div>    
             </div>
         </div>
+    </div>
+    <div id="downBtn">
+        <!-- <img class="btnIcon" src="/icons/downArrow.svg"> -->
     </div>
     <script src="/scripts/format.js"></script>
 </body>
