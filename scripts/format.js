@@ -47,19 +47,19 @@ function format() {
 
 
         // fancy centering of pricing detail ul
-        document.documentElement.style.setProperty('--pricingItemListPadding', 0 + 'px')    // must do this first so the p can expand before evaluation of its length
+        document.documentElement.style.setProperty('--pricingItemListMargin', 0 + 'px')    // must do this first so the p can expand before evaluation of its length
 
         let longestItemListText = document.querySelector('#longestItemListText')
         let pricingCardIndividual = document.querySelector('.pricingCard')
         
         let pricingCardIndividualWidth = pricingCardIndividual.offsetWidth
-        let longestItemListTextWidth = longestItemListText.offsetWidth /* + 24 */
-        let pricingItemListPadding = (pricingCardIndividualWidth - longestItemListTextWidth) / 2
+        let longestItemListTextWidth = longestItemListText.offsetWidth + 2/* + 24 */
+        let pricingItemListMargin = (pricingCardIndividualWidth - longestItemListTextWidth) / 2
         console.log(pricingCardIndividualWidth);
         console.log(longestItemListTextWidth);
-        console.log(pricingItemListPadding);
+        console.log(pricingItemListMargin);
 
-        document.documentElement.style.setProperty('--pricingItemListPadding', pricingItemListPadding + 'px')
+        document.documentElement.style.setProperty('--pricingItemListMargin', pricingItemListMargin + 'px')
 
     }
 }

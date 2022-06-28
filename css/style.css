@@ -213,8 +213,8 @@ s {
 }
 
 .pricingItemList > li {
-    margin: 0px 0px 8px 0px;
-    padding: 0px var(--pricingItemListPadding) 0px var(--pricingItemListPadding);
+    /* margin: 0px 0px 8px 0px; */
+    margin: 0px 0px 8px var(--pricingItemListMargin);
 }
 
 .pricingItemList > li > p {
@@ -225,6 +225,11 @@ s {
     font-weight: initial;
     font-size: 12pt;
     color: var(--cardLightTextColor);
+}
+
+.pricingItemIcon {
+    width: 20px;
+    height: 20px;
 }
 
 #helpModal {
