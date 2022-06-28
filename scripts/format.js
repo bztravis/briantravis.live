@@ -53,7 +53,7 @@ function format() {
         let pricingCardIndividual = document.querySelector('.pricingCard')
         
         let pricingCardIndividualWidth = pricingCardIndividual.offsetWidth
-        let longestItemListTextWidth = longestItemListText.offsetWidth + 2/* + 24 */
+        let longestItemListTextWidth = longestItemListText.offsetWidth/* + 24 */
         let pricingItemListMargin = (pricingCardIndividualWidth - longestItemListTextWidth) / 2
         console.log(pricingCardIndividualWidth);
         console.log(longestItemListTextWidth);

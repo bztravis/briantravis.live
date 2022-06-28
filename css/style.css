@@ -227,11 +227,6 @@ s {
     color: var(--cardLightTextColor);
 }
 
-.pricingItemIcon {
-    width: 20px;
-    height: 20px;
-}
-
 #helpModal {
     background: #ffffff;
     font-family: 'Inter Light';
