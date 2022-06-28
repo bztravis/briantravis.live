@@ -105,16 +105,21 @@ body {
     margin: 0px 0px 0px calc(var(--contentContainerWidth) - var(--flexContainerWidth) + 8px);
 }
 
+/* overrides .flexContainer */
+.pricingFlexContainer {
+    flex-wrap: nowrap;
+}
+
 .pricingCard {
     flex-grow: 1;
+    flex-shrink: 1;
     min-width: 200px;
     margin: 0px 0px 8px 8px;
     padding: 36px 0px 36px 0px;
     display: inline-block;
     border-radius: var(--cardBorderRadius);
     background: var(--cardBG);
-    color: var(--heavyTextColor)
-    /* scroll-snap-align: end; */
+    color: var(--heavyTextColor);
 }
 
 /* min width: 800px */

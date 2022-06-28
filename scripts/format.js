@@ -34,12 +34,12 @@ function format() {
     if (document.getElementsByTagName('title')[0].innerText == 'Pricing - Brian Travis Photography') {
         let flexContainer = document.querySelector('.flexContainer')
         let pricingCard = document.querySelectorAll('.pricingCard')
-        if (flexContainerWidth < ((200 + 8) * 3)) {
+        if ((flexContainerWidth / ((200 + 8))) < 3) {
             flexContainer.style.flexDirection = 'column'
             pricingCard.forEach((individCard) => {individCard.style.maxWidth = 'none'})
         } else {
             flexContainer.style.flexDirection = 'row'
-            pricingCard.forEach((individCard) => {individCard.style.maxWidth = '300px'})
+            pricingCard.forEach((individCard) => {individCard.style.maxWidth = '400px'})
         }
     }
 }
