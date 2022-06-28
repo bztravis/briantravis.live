@@ -216,3 +216,15 @@
     line-height: 150%;
     color: var(--heavyTextColor);
 }
+
+#helpModalCloseBtn {
+    width: 18px;
+    height: 18px;
+    top: 8px;
+    right: 8px;
+    position: absolute;
+}
+
+#helpModalCloseBtn:hover {
+    cursor: pointer;
+}
