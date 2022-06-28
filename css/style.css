@@ -182,7 +182,7 @@
 
 .pricingCardBanner {
     width: 100%;
-    margin: 0px 0px 12px 0px;
+    margin: 0px 0px 24px 0px;
     padding: 4px 8px 4px 8px;
     text-align: center;
     font-family: 'Inter Bold';
@@ -193,7 +193,7 @@
 }
 
 .pricingItemList {
-    margin: 0px 0px 36px 0px;
+    margin: 0px 0px 24px 0px;
     padding: 0;
     list-style-position: inside;
     text-align: center;
