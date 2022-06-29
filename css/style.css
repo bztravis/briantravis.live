@@ -60,6 +60,10 @@ s {
     color: var(--mediumTextColor);
 }
 
+b,strong {
+    font-family: 'Inter Bold';
+    font-weight: initial;
+}
 
 
 
@@ -147,18 +151,20 @@ s {
 
 .contentHeading {
     margin-top: 8px;
-    margin-bottom: 8px;
+    margin-bottom: 16px;
     font-family: 'Inter Bold';
-    font-size: 14pt;
+    font-size: 16pt;
     font-weight: initial;
     color: var(--heavyTextColor);
 }
 
 .contentParagraph {
-    margin-bottom: 36px;
+    margin-bottom: 16px;
+    padding: 0;
     font-family: 'Inter Light';
     font-size: 12pt;
     font-weight: initial;
+    line-height: 150%;
     color: var(--heavyTextColor);
 }
 

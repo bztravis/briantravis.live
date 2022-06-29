@@ -76,6 +76,7 @@ body {
     display: inline-block;
     border-radius: var(--cardBorderRadius);
     background: var(--cardBG);
+    background-size: cover;
     scroll-snap-align: end;
 }
 
@@ -154,8 +155,7 @@ body {
     width: calc((var(--flexContainerWidth) - 56px * 2));
     max-width: 600px;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0px auto 56px auto;
 }
 
 /* min width: 800px */

@@ -39,10 +39,10 @@ function format() {
 
         if ((flexContainerWidth / ((200 + 8))) < 3) {
             flexContainer.style.flexDirection = 'column'
-            pricingCard.forEach((individCard) => {individCard.style.maxWidth = 'none'})
+            pricingCard.forEach((individualCard) => {individualCard.style.maxWidth = 'none'})
         } else {
             flexContainer.style.flexDirection = 'row'
-            pricingCard.forEach((individCard) => {individCard.style.maxWidth = '400px'})
+            pricingCard.forEach((individualCard) => {individualCard.style.maxWidth = '400px'})
         }
 
 
