@@ -150,5 +150,13 @@ body {
     color: var(--heavyTextColor);
 }
 
+#aboutMeImg {
+    width: calc((var(--flexContainerWidth) - 56px * 2));
+    max-width: 600px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 /* min width: 800px */
 /* min height: 600px */

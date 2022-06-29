@@ -247,3 +247,11 @@ s {
 #helpModalCloseBtn:hover {
     cursor: pointer;
 }
+
+#aboutContent {
+    min-height: 100%;
+    padding: 56px;
+    border-radius: var(--cardBorderRadius);
+    background: var(--cardBG);
+}
+
