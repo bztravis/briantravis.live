@@ -42,6 +42,8 @@ function copyToClipboard(text, classOrder) {
             targetElement.style.opacity = 0
             setTimeout(() => {targetElement.style.opacity = 1}, 200)
             setTimeout(() => {targetElement.innerText = initialText}, 200)
+            setTimeout(() => {targetElement.parentElement.style.pointerEvents = 'none'}, 200)
+            setTimeout(() => {targetElement.parentElement.style.pointerEvents = 'auto'}, 500)
         }, 2000)
     }
 }
