@@ -60,9 +60,10 @@ s {
     color: var(--mediumTextColor);
 }
 
-b,strong {
+b, strong {
     font-family: 'Inter Bold';
     font-weight: initial;
+    font-size: inherit;
 }
 
 
@@ -159,6 +160,7 @@ b,strong {
 }
 
 .contentParagraph {
+    margin-top: 0;
     margin-bottom: 16px;
     padding: 0;
     font-family: 'Inter Light';
@@ -256,7 +258,7 @@ b,strong {
 
 #aboutContent {
     min-height: 100%;
-    padding: 56px;
+    padding: 56px 56px calc(56px - 16px) 56px;  /* lowest inner element is .contentParagraph */
     border-radius: var(--cardBorderRadius);
     background: var(--cardBG);
 }
