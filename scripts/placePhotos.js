@@ -25,7 +25,7 @@ function placePhotos() {
             let randomPhotoIndex = Math.floor(Math.random() * range.length)
             let photoName = range[randomPhotoIndex]
 
-            photoCards[currentCard].style.backgroundImage = `url('/images/portfolio/${photoName}.jpg')`
+            photoCards[currentCard].style.backgroundImage = `url('/images/portfolio/${photoName}.png')`
             
             // photoCards[currentCard].innerHTML = currentCard
 
