@@ -24,15 +24,15 @@
         </nav>
         <footer style="display: inline;">
             <ul id="footerDetailList">
-                <li>
+                <li class="hoverScale" target="_blank" onclick="window.open('https://www.instagram.com/bztravis88/')">
                     <i class="footerIcon"><img src="/icons/instagram.svg"></i>
                     <h3 class="footerDetail hasIcon">@bztravis88</h3>
                 </li>
-                <li>
+                <li class="hoverScale" onclick="copyToClipboard('(616) 915-9195', 1)">
                     <i class="footerIcon"><img src="/icons/comment.svg"></i>
                     <h3 class="footerDetail hasIcon">(616) 915-9195</h3>
                 </li>
-                <li>
+                <li class="hoverScale" onclick="copyToClipboard('briantravisphotography@gmail.com', 2)">
                     <i class="footerIcon"><img src="/icons/message.svg"></i>
                     <h3 class="footerDetail hasIcon">briantravisphotography@gmail.com</h3>
                 </li>
@@ -100,7 +100,7 @@
             </div>
         </div>
     </div>
-    <div id="helpBtn" onclick="toggleHelpModal()">
+    <div id="helpBtn" class="hoverScale" onclick="toggleHelpModal()">
         <img class="btnIcon" src="/icons/questionMark.svg">
     </div>
     <div id="helpModal">
