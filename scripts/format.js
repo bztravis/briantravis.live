@@ -33,12 +33,25 @@ function format() {
         let flexContainer = document.querySelector('.flexContainer')
         let pricingCard = document.querySelectorAll('.pricingCard')
 
-        if ((flexContainerWidth / ((200 + 8))) < 3) {
-            flexContainer.style.flexDirection = 'column'
-            pricingCard.forEach((individualCard) => {individualCard.style.maxWidth = 'none'})
+        let width = window.innerWidth;
+        let height = window.innerHeight;
+        let isMobile = (height < 500) || (width < 850) || (height > 700 && (width / height < 850 / 700))
+        if (!isMobile) {
+            if ((flexContainerWidth / ((200 + 8))) < 3) {
+                flexContainer.style.flexDirection = 'column'
+                pricingCard.forEach((individualCard) => {individualCard.style.maxWidth = 'none'})
+            } else {
+                flexContainer.style.flexDirection = 'row'
+                pricingCard.forEach((individualCard) => {individualCard.style.maxWidth = '400px'})
+            }
         } else {
-            flexContainer.style.flexDirection = 'row'
-            pricingCard.forEach((individualCard) => {individualCard.style.maxWidth = '400px'})
+            if ((flexContainer.offsetWidth / ((200 + 8))) < 3) {
+                flexContainer.style.flexDirection = 'column'
+                pricingCard.forEach((individualCard) => {individualCard.style.maxWidth = 'none'})
+            } else {
+                flexContainer.style.flexDirection = 'row'
+                pricingCard.forEach((individualCard) => {individualCard.style.maxWidth = '400px'})
+            }
         }
 
 

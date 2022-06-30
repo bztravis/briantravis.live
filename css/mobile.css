@@ -43,8 +43,14 @@
         right: auto;
         overflow-y: hidden;
         scroll-snap-type: none;
+    }
+    .pricingFlexContainer {
+        width: 100%;
+        position: static;
+        margin-bottom: var(--bodyPadding);
+    }
+    .card {
 
-        /* background: red; */
     }
     .contentHeading {
         margin-top: 0px;    /* 8px */
@@ -95,7 +101,6 @@
     #aboutMeContent {
         min-height: 0px;    /* 100% */
         padding: 0;
-        /* padding-bottom: var(--bodyPadding); */
         background: none;   /* var(--cardBG) */
     }
 }
