@@ -45,8 +45,9 @@
         scroll-snap-type: none;
     }
     .pricingFlexContainer {
-        width: 100%;
-        position: static;
+        width: calc(100% + 8px);
+        position: relative;
+        left: -8px;
         margin-bottom: var(--bodyPadding);
     }
     .card {
