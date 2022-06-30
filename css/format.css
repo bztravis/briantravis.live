@@ -23,7 +23,6 @@
 body {
     width: 100vw;
     height: calc(var(--vh, 1vh) * 100);
-    /* height: -webkit-fill-available; */
     margin: 0;
     padding: var(--bodyPadding);
     background: var(--bodyBG);
@@ -109,6 +108,7 @@ body {
     right: var(--bodyPadding);
     border-radius: calc(var(--bodyPadding) / 2);
     background: #ffffff;
+    z-index: 2;
 }
 
 #helpBtn:hover {

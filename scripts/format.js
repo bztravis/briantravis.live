@@ -79,34 +79,3 @@ function checkToggleDownBtn() {
         downBtn.style.opacity = '1'
     }
 }
-
-
-
-
-function checkForMobile(cardCount) {
-
-    let styleSheet = document.styleSheets[0]
-
-    
-
-    let footerDetailList = document.querySelector('#footerDetailList')
-    let navLinkList = document.querySelector('#navLinkList')
-
-    if (window.innerHeight < 500 || cardCount < 2) {
-
-        
-
-        // footerDetailList.style.removeProperty('bottom')
-        // footerDetailList.style.top = '32px'
-        styleSheet.insertRule("#footerDetailList { top: 32px; }", )
-        styleSheet.insertRule("footer { position: absolute; }", )
-
-    } else {
-        
-        // footerDetailList.style.removeProperty('top')
-        // footerDetailList.style.bottom = '0px'
-        styleSheet.insertRule("#footerDetailList { bottom: 0px; }", )
-        styleSheet.insertRule("footer { position: static; }", )
-
-    }
-}
