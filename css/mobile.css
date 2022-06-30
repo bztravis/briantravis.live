@@ -1,7 +1,7 @@
 @media (max-height: 500px), (max-width: 850px), (min-height: 700px) and (max-aspect-ratio: 850/700) {
 
     :root {
-        --bodyPadding: 48px;    /* 56px */
+        --bodyPadding: 56px;    /* 56px */
     }
 
     footer {
@@ -48,18 +48,49 @@
         overflow-y: hidden;
         scroll-snap-type: none;
 
-        background: red;
+        /* background: red; */
 
+    }
+    .alignWithFlexContainer {
+        width: auto;
+        margin: 0;
     }
 }
 
 
 
 
-@media (max-width: 350px) {
+/* phone bodyPadding */
+@media (max-width: 550px) {
 
     :root {
         --bodyPadding: 32px;    /* 56px */
+    }
+
+    #helpBtn {
+        width: 56px;    /* --bodyPadding */
+        height: 56px;   /* --bodyPadding */
+        border-radius: calc(56px / 2);
+    }
+    .btnIcon {
+        width: calc(56px / 2);
+        height: calc(56px / 2);
+        top: calc(56px / 4);
+        left: calc(56px / 4);
+    }
+    #helpModal {
+        width: calc(100vw - 56px - 2 * var(--bodyPadding) - 16px);    /* 300px */
+        right: calc(56px + var(--bodyPadding) + 16px)
+    }
+}
+
+
+
+
+/* footer size must decrease */
+@media (max-width: 350px) {
+
+    :root {
         --footerDetailTextSize: 8pt;    /* 10pt */
         --footerDetailIconSize: 16px    /* 18px */
     }
@@ -68,10 +99,11 @@
 
 
 
+/* no longer viewable */
 @media (max-width: 319px) {
 
     body {
         filter: blur(12px);
-        transition: filter 0.5s;
+        transition: filter 0.2s;
     }
 }
