@@ -7,7 +7,8 @@ const photoConfig = [
 function placePhotos() {
 
     let photoCards = document.getElementsByClassName('card')
-    let currentCard = photoCards.length - 1
+    let currentCard = photoConfig[photoConfig.length - 1]
+    currentCard = currentCard[currentCard.length - 1]
 
     for (let subject = 0; subject < photoConfig.length; subject++) {
 
