@@ -1,10 +1,5 @@
 function format() {
 
-    if (window.innerWidth < 600) {
-        // alert('format() error')
-        return
-    }
-
     let contentContainerWidth = window.innerWidth - (3 * 56) - 260
     let contentContainerHeight = window.innerHeight - (2 * 56)
     let cardHeight = (contentContainerHeight / 2) - 4
@@ -22,6 +17,7 @@ function format() {
 
     let vh = window.innerHeight * 0.01
     document.documentElement.style.setProperty('--vh', `${vh}px`)
+
 
 
 
@@ -81,5 +77,36 @@ function checkToggleDownBtn() {
         downBtn.style.opacity = '0'
     } else {
         downBtn.style.opacity = '1'
+    }
+}
+
+
+
+
+function checkForMobile(cardCount) {
+
+    let styleSheet = document.styleSheets[0]
+
+    
+
+    let footerDetailList = document.querySelector('#footerDetailList')
+    let navLinkList = document.querySelector('#navLinkList')
+
+    if (window.innerHeight < 500 || cardCount < 2) {
+
+        
+
+        // footerDetailList.style.removeProperty('bottom')
+        // footerDetailList.style.top = '32px'
+        styleSheet.insertRule("#footerDetailList { top: 32px; }", )
+        styleSheet.insertRule("footer { position: absolute; }", )
+
+    } else {
+        
+        // footerDetailList.style.removeProperty('top')
+        // footerDetailList.style.bottom = '0px'
+        styleSheet.insertRule("#footerDetailList { bottom: 0px; }", )
+        styleSheet.insertRule("footer { position: static; }", )
+
     }
 }
