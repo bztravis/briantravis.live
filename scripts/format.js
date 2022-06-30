@@ -75,6 +75,7 @@ function format() {
 
 format()
 document.body.onresize = () => { format() }
+document.body.onorientationchange = () => { format() }
 
 
 
