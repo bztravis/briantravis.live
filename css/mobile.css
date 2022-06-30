@@ -123,3 +123,13 @@
         transition: filter 0.2s;
     }
 }
+
+
+
+
+@media (hover: none) {
+
+    .hoverScale:hover {
+        transform: none;
+    }
+}
