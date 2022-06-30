@@ -9,7 +9,7 @@
     }
     #footerDetailList {
         bottom: auto;
-        top: 32px;
+        top: 24px;
     }
 
     #navBar {
@@ -27,6 +27,14 @@
 
     #downBtn {
         display: none;
+    }
+
+    #helpModal {
+        width: calc(100vw - 3 * var(--bodyPadding) - 16px);    /* 300px */
+    }
+
+    #contentContainer {
+
     }
 }
 
@@ -46,7 +54,7 @@
 
 
 @media (max-width: 319px) {
-    
+
     body {
         filter: blur(12px);
         transition: filter 0.5s;
