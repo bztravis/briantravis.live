@@ -156,5 +156,5 @@ footer {
     width: calc((var(--flexContainerWidth) - 56px * 2));
     max-width: 600px;
     display: block;
-    margin: 0px auto 56px auto;
+    margin: 0px auto var(--bodyPadding) auto;
 }

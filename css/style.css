@@ -277,7 +277,7 @@ b, strong {
 
 #aboutContent {
     min-height: 100%;
-    padding: 56px 56px calc(56px - 16px) 56px;  /* lowest inner element is .contentParagraph */
+    padding: var(--bodyPadding) var(--bodyPadding) calc(56px - 16px) var(--bodyPadding);  /* lowest inner element is .contentParagraph */
     border-radius: var(--cardBorderRadius);
     background: var(--cardBG);
 }

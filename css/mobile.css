@@ -6,7 +6,7 @@
 
     footer {
         margin-top: 24px;
-        margin-bottom: 24px;
+        margin-bottom: var(--bodyPadding);
         display: block; /* inline */
     }
     #footerDetailList {
@@ -44,7 +44,7 @@
         overflow-y: hidden;
         scroll-snap-type: none;
 
-        background: red;
+        /* background: red; */
 
     }
     .alignWithFlexContainer {
