@@ -2,6 +2,8 @@
 
     :root {
         --bodyPadding: 56px;    /* 56px */
+        --cardWidth: calc(((100vw - 2 * var(--bodyPadding)) - 8px) / 2 - 4px);
+        --cardHeight: calc(var(--cardWidth) * 3 / 2);
     }
 
     footer {
@@ -44,14 +46,15 @@
         overflow-y: hidden;
         scroll-snap-type: none;
     }
-    .pricingFlexContainer {
+    .flexContainer {
         width: calc(100% + 8px);
         position: relative;
         left: -8px;
         margin-bottom: var(--bodyPadding);
     }
     .card {
-
+        width: var(--cardWidth);
+        /* height: 30px; */
     }
     .contentHeading {
         margin-top: 0px;    /* 8px */
@@ -76,6 +79,7 @@
 
     :root {
         --bodyPadding: 32px;    /* 56px */
+        --cardWidth: calc((100vw - 2 * var(--bodyPadding)) - 8px);
     }
 
     #helpBtn {
