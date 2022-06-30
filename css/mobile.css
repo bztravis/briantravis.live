@@ -32,10 +32,6 @@
         display: none;
     }
 
-    #helpModal {
-        width: calc(100vw - 3 * var(--bodyPadding) - 16px);    /* 300px */
-    }
-
     body {
         overflow: scroll;   /* hidden */
     }
@@ -48,7 +44,7 @@
         overflow-y: hidden;
         scroll-snap-type: none;
 
-        /* background: red; */
+        background: red;
 
     }
     .alignWithFlexContainer {
@@ -71,16 +67,18 @@
         width: 56px;    /* --bodyPadding */
         height: 56px;   /* --bodyPadding */
         border-radius: calc(56px / 2);
+        box-shadow: 0px 0px 48px rgba(0, 0, 0, 0.1);    /* none */
     }
     .btnIcon {
-        width: calc(56px / 2);
+        width: calc(56px / 2);  /* --bodyPadding -> 56px */
         height: calc(56px / 2);
         top: calc(56px / 4);
         left: calc(56px / 4);
     }
     #helpModal {
         width: calc(100vw - 56px - 2 * var(--bodyPadding) - 16px);    /* 300px */
-        right: calc(56px + var(--bodyPadding) + 16px)
+        right: calc(56px + var(--bodyPadding) + 16px);
+        box-shadow: 0px 0px 48px rgba(0, 0, 0, 0.1);    /* none */
     }
 }
 
