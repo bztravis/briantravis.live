@@ -275,7 +275,7 @@ b, strong {
     cursor: pointer;
 }
 
-#aboutContent {
+#aboutMeContent {
     min-height: 100%;
     padding: var(--bodyPadding) var(--bodyPadding) calc(56px - 16px) var(--bodyPadding);  /* lowest inner element is .contentParagraph */
     border-radius: var(--cardBorderRadius);

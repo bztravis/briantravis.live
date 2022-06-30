@@ -45,11 +45,19 @@
         scroll-snap-type: none;
 
         /* background: red; */
-
+    }
+    .contentHeading {
+        margin-top: 0px;    /* 8px */
     }
     .alignWithFlexContainer {
         width: auto;
-        margin: 0;
+        margin-left: 0;
+    }
+    #aboutMeContent {
+        margin-bottom: var(--bodyPadding);
+    }
+    #aboutMeImg {
+        width: 100%;    /* calc((var(--flexContainerWidth) - 56px * 2)); */
     }
 }
 
@@ -79,6 +87,16 @@
         width: calc(100vw - 56px - 2 * var(--bodyPadding) - 16px);    /* 300px */
         right: calc(56px + var(--bodyPadding) + 16px);
         box-shadow: 0px 0px 48px rgba(0, 0, 0, 0.1);    /* none */
+    }
+
+    #aboutMeImg {
+        max-width: none;    /* 600px */
+    }
+    #aboutMeContent {
+        min-height: 0px;    /* 100% */
+        padding: 0;
+        /* padding-bottom: var(--bodyPadding); */
+        background: none;   /* var(--cardBG) */
     }
 }
 
