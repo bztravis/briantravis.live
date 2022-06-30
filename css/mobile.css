@@ -5,15 +5,18 @@
     }
 
     footer {
-        position: relative;
+        margin-top: 24px;
+        margin-bottom: 24px;
+        display: block; /* inline */
     }
     #footerDetailList {
-        bottom: auto;
-        top: 24px;
+        position: static;
     }
 
     #navBar {
         width: calc(100vw - 2 * var(--bodyPadding));    /* var(--navBarWidth) */
+        height: auto;
+        position: static;
     }
     #navLinkList {
         margin-top: 16px;   /* 32px */
@@ -33,7 +36,19 @@
         width: calc(100vw - 3 * var(--bodyPadding) - 16px);    /* 300px */
     }
 
+    body {
+        overflow: scroll;   /* hidden */
+    }
     #contentContainer {
+        width: calc(100vw - 2 * var(--bodyPadding));
+        height: auto;
+        position: static;
+        top: auto;
+        right: auto;
+        overflow-y: hidden;
+        scroll-snap-type: none;
+
+        background: red;
 
     }
 }

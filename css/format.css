@@ -29,6 +29,9 @@ body {
     overflow: hidden;
 }
 
+footer {
+    display: inline;
+}
 
 
 
@@ -45,8 +48,6 @@ body {
     position: fixed;
     top: var(--bodyPadding);
     right: var(--bodyPadding);
-    /* background: var(--cardBG); */
-    /* border-bottom: 8px solid var(--bodyBG); */
     overflow-y: scroll;
     scrollbar-width: none;
     scroll-snap-type: y mandatory;
