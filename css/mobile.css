@@ -1,13 +1,8 @@
 @media (max-height: 500px), (max-width: 850px), (min-height: 700px) and (max-aspect-ratio: 850/700) {
-    body {
-        /* background: #ffaaaa; */
-    }
-
 
     :root {
-        --bodyPadding: 48px;
+        --bodyPadding: 48px;    /* 56px */
     }
-
 
     footer {
         position: relative;
@@ -17,23 +12,19 @@
         top: 32px;
     }
 
-
-
     #navBar {
-        width: calc(100vw - 2 * var(--bodyPadding));
+        width: calc(100vw - 2 * var(--bodyPadding));    /* var(--navBarWidth) */
     }
     #navLinkList {
-        margin-top: 16px;
+        margin-top: 16px;   /* 32px */
     }
     #navLinkList > li {
-        margin-right: 16px;
-        margin-bottom: 8px;
+        margin-right: 16px; /* 0px */
+        margin-bottom: 8px; /* 12px */
         display: inline-block;
         white-space: nowrap;
     }
 
-
-    /* hide/show */
     #downBtn {
         display: none;
     }
@@ -43,15 +34,11 @@
 
 
 @media (max-width: 350px) {
-    /* body {
-        background: #aaffaa;
-    } */
-
 
     :root {
-        --bodyPadding: 32px;
-        --footerDetailTextSize: 8pt;
-        --footerDetailIconSize: 16px
+        --bodyPadding: 32px;    /* 56px */
+        --footerDetailTextSize: 8pt;    /* 10pt */
+        --footerDetailIconSize: 16px    /* 18px */
     }
 }
 
@@ -59,6 +46,7 @@
 
 
 @media (max-width: 319px) {
+    
     body {
         filter: blur(12px);
         transition: filter 0.5s;
