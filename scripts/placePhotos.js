@@ -1,6 +1,6 @@
 const photoConfig = [
-    [0, 7], // Summer
-    [8, 9] // Andy
+    [0, 9], // Summer
+    [10, 11] // Andy
 ]
 
 
