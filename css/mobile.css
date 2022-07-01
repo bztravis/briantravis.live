@@ -128,7 +128,11 @@
 /* no longer viewable */
 @media (max-width: 319px) {
 
+    * {
+        pointer-events: none;
+    }
     body {
+        overflow: hidden;
         filter: blur(12px);
         transition: filter 0.2s;
     }
