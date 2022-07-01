@@ -73,6 +73,7 @@ b, strong {
     padding: 0;
     position: relative;
     top: -4px;
+    display: inline;
     font-family: 'Glamour Luxury Round';
     font-weight: normal;
     font-size: var(--titleTextSize);
