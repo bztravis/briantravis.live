@@ -224,7 +224,7 @@ b, strong {
 }
 
 .pricingItemList {
-    margin: 0px 0px 24px 0px;
+    margin: 24px 0px 24px 0px;
     padding: 0;
     list-style: none;
     /* list-style-position: inside; */
