@@ -9,6 +9,13 @@ function downBtnScrollDown() {
 
 
 
+function showScrollMessage() {
+    
+}
+
+
+
+
 function toggleHelpModal() {
     let helpModal = document.querySelector('#helpModal')
     if (window.getComputedStyle(helpModal).pointerEvents == 'none') {
