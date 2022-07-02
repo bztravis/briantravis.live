@@ -1,16 +1,14 @@
 const photoConfig = [
-    [0, 9], // Summer
-    [10, 11] // Andy
+    [0, 10], // Summer
+    [11, 12] // Andy
 ]
 
 
 function placePhotos() {
 
-    let photoCards = document.getElementsByClassName('card')
-    let currentCard = photoConfig[photoConfig.length - 1]
-    currentCard = currentCard[currentCard.length - 1]
+    let currentCard = 0
 
-    for (let subject = 0; subject < photoConfig.length; subject++) {
+    for (let subject = photoConfig.length - 1; subject >= 0; subject--) {
 
         // console.log(`subject${subject}`);
 
@@ -26,20 +24,18 @@ function placePhotos() {
             let randomPhotoIndex = Math.floor(Math.random() * range.length)
             let photoName = range[randomPhotoIndex]
 
+            let flexContainer = document.getElementsByClassName('flexContainer')[0]
+            let newCard = document.createElement('div')
+            newCard.classList.add('card')
+            flexContainer.appendChild(newCard)
+
+            let photoCards = document.getElementsByClassName('card')
             photoCards[currentCard].style.backgroundImage = `url('/images/portfolio/${photoName}.png')`
             
-            // photoCards[currentCard].innerHTML = currentCard
-
-            currentCard--
+            currentCard++
             range.splice(randomPhotoIndex, 1)   // remove element at index
         }
     }
-    
-
-    // for (let i = 0; i < photoCards.length; i++) {
-        // photoCards[i].style.backgroundImage = `url('/images/portfolio/${photoCards.length - 1 - i}.JPG')`
-    // }
-
 }
 
 placePhotos()
