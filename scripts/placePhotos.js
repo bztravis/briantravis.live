@@ -20,7 +20,7 @@ function placePhotos() {
 
 
         while (range.length > 0) {
-            console.log(range.length);
+            // console.log(range.length);
             let randomPhotoIndex = Math.floor(Math.random() * range.length)
             let photoName = range[randomPhotoIndex]
 
