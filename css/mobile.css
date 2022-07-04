@@ -113,18 +113,6 @@
 
 
 
-/* footer size must decrease */
-@media (max-width: 350px) {
-
-    :root {
-        --footerDetailTextSize: 8pt;    /* 10pt */
-        --footerDetailIconSize: 16px    /* 18px */
-    }
-}
-
-
-
-
 /* no longer viewable */
 @media (max-width: 319px) {
 
