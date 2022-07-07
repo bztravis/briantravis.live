@@ -113,6 +113,17 @@
 
 
 
+/* helpModal size must decrease */
+@media (max-width: 350px) {
+
+    :root {
+        --helpModalTextSize: 12pt;    /* 14pt */
+    }
+}
+
+
+
+
 /* no longer viewable */
 @media (max-width: 319px) {
 

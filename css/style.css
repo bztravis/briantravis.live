@@ -39,6 +39,7 @@
     --titleTextSize: 36pt;
     --navLinkTextSize: 14pt;
     --footerDetailTextSize: 10pt;
+    --helpModalTextSize: 14pt;
 
     /* icon sizes */
     --footerDetailIconSize: 18px;
@@ -258,7 +259,7 @@ b, strong {
     background: #ffffff;
     font-family: 'Inter Light';
     font-weight: normal;
-    font-size: 14pt;
+    font-size: var(--helpModalTextSize);
     line-height: 150%;
     color: var(--heavyTextColor);
 }
