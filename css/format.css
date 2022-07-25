@@ -1,0 +1,162 @@
+:root {
+    /* dimensions */
+    --bodyPadding: 56px;
+    --navBarWidth: 260px;
+    --contentContainerWidth: calc(100vw - 3 * var(--bodyPadding) - var(--navBarWidth));
+    --contentContainerHeight: calc((100 * var(--vh)) - 2 * var(--bodyPadding));
+    --cardHeight: calc(var(--contentContainerHeight) / 2 - 4px);
+    --cardBorderRadius: 0.4vh;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+    display: none;
+}
+
+
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: calc(var(--vh, 1vh) * 100);
+    margin: 0;
+    padding: var(--bodyPadding);
+    background: var(--bodyBG);
+    overflow: hidden;
+}
+
+footer {
+    display: inline;
+}
+
+
+
+#navBar {
+    width: var(--navBarWidth);
+    height: calc((100 * var(--vh)) - 2 * var(--bodyPadding));
+    position: fixed;
+    z-index: 1;
+}
+
+#contentContainer {
+    width: var(--contentContainerWidth);
+    height: var(--contentContainerHeight);
+    position: fixed;
+    top: var(--bodyPadding);
+    right: var(--bodyPadding);
+    overflow-y: scroll;
+    scrollbar-width: none;
+    scroll-snap-type: y mandatory;
+}
+
+#relativeContainer {
+    width: 100%;
+    position: relative;
+}
+
+.flexContainer {
+    width: var(--flexContainerWidth);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: left;
+    position: absolute;
+    right: 0px;
+}
+
+.card {
+    width: calc(var(--cardHeight) / 3 * 2);
+    height: var(--cardHeight); 
+    margin: 0px 0px 8px 8px;
+    padding: 0;
+    display: inline-block;
+    border-radius: var(--cardBorderRadius);
+    background: var(--cardBG);
+    background-size: cover;
+    scroll-snap-align: end;
+}
+
+#downBtn {
+    width: var(--bodyPadding);
+    height: var(--bodyPadding);
+    position: fixed;
+    bottom: calc(var(--bodyPadding) * 3 / 4);
+    right: calc( var(--flexContainerWidth) + var(--bodyPadding) - 8px - ((var(--cardCount) * (var(--cardWidthExact) + 8px) - 8px) / 2) - (var(--bodyPadding) / 2));
+    border-radius: calc(var(--bodyPadding) / 2);
+    background: #ffffff;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s;
+}
+
+.btnIcon {
+    width: calc(var(--bodyPadding) / 2);
+    height: calc(var(--bodyPadding) / 2);
+    position: absolute;
+    top: calc(var(--bodyPadding) / 4);
+    left: calc(var(--bodyPadding) / 4);
+}
+
+#helpBtn {
+    width: var(--bodyPadding);
+    height: var(--bodyPadding);
+    position: fixed;
+    bottom: var(--bodyPadding);
+    right: var(--bodyPadding);
+    border-radius: calc(var(--bodyPadding) / 2);
+    background: #ffffff;
+    z-index: 2;
+}
+
+#helpBtn:hover {
+    cursor: pointer;
+}
+
+#helpModal {
+    width: 300px;
+    max-height: calc(100 * var(--vh) - (2 * var(--bodyPadding)));
+    margin: 0;
+    padding: 32px;
+    border-radius: var(--cardBorderRadius);
+    position: fixed;
+    bottom: var(--bodyPadding);
+    right: calc(var(--bodyPadding) * 2 + 16px);
+    opacity: 0;
+    pointer-events: none;
+    overflow-y: scroll;
+    z-index: 2;
+    transition: opacity 0.1s;
+}
+
+.alignWithFlexContainer {
+    width: calc(var(--flexContainerWidth) - 8px);
+    margin: 0px 0px 0px calc(var(--contentContainerWidth) - var(--flexContainerWidth) + 8px);
+}
+
+/* overrides .flexContainer */
+.pricingFlexContainer {
+    flex-wrap: nowrap;
+}
+
+.pricingCard {
+    flex-grow: 1;
+    flex-shrink: 1;
+    min-width: 200px;
+    margin: 0px 0px 8px 8px;
+    padding: 48px 0px 48px 0px;
+    display: inline-block;
+    border-radius: var(--cardBorderRadius);
+    background: var(--cardBG);
+    color: var(--heavyTextColor);
+}
+
+#aboutMeImg {
+    width: calc((var(--flexContainerWidth) - 56px * 2));
+    max-width: 600px;
+    display: block;
+    margin: 0px auto var(--bodyPadding) auto;
+}

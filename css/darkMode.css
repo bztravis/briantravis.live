@@ -1,0 +1,19 @@
+:root {
+    /* BG colors */
+    --bodyBG: #1a1a1a;
+    --cardBG: #202020;
+    --modalBG: #ffffff;
+
+    /* text colors */
+    --heavyTextColor: #c0c0c0;
+    --mediumTextColor: #707070;
+    --cardLightTextColor: #a0a0a0;   
+
+    /* text sizes */
+    --titleTextSize: 36pt;
+    --navLinkTextSize: 14pt;
+    --footerDetailTextSize: 10pt;
+
+    /* icon sizes */
+    --footerDetailIconSize: 18px;
+}

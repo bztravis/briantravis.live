@@ -1,0 +1,148 @@
+@media (max-height: 500px), (max-width: 850px), (min-height: 700px) and (max-aspect-ratio: 850/700) {
+
+    :root {
+        --bodyPadding: 56px;    /* 56px */
+        --cardWidth: calc(((100vw - 2 * var(--bodyPadding)) - 8px) / 2 - 4px);
+        --cardHeight: calc(var(--cardWidth) * 3 / 2);
+    }
+
+    footer {
+        margin-top: 24px;
+        margin-bottom: var(--bodyPadding);
+        display: block; /* inline */
+    }
+    #footerDetailList {
+        position: static;
+    }
+
+    #navBar {
+        width: calc(100vw - 2 * var(--bodyPadding));    /* var(--navBarWidth) */
+        height: auto;
+        position: static;
+    }
+    #navLinkList {
+        margin-top: 16px;   /* 32px */
+    }
+    #navLinkList > li {
+        margin-right: 16px; /* 0px */
+        margin-bottom: 8px; /* 12px */
+        display: inline-block;
+        white-space: nowrap;
+    }
+
+    #downBtn {
+        display: none;
+    }
+
+    body {
+        overflow: scroll;   /* hidden */
+    }
+    #contentContainer {
+        width: calc(100vw - 2 * var(--bodyPadding));
+        height: auto;
+        position: static;
+        top: auto;
+        right: auto;
+        overflow-y: hidden;
+        scroll-snap-type: none;
+    }
+    .flexContainer {
+        width: calc(100% + 8px);
+        position: relative;
+        left: -8px;
+        margin-bottom: var(--bodyPadding);
+    }
+    .card {
+        width: var(--cardWidth);
+        /* height: 30px; */
+    }
+    .contentHeading {
+        margin-top: 0px;    /* 8px */
+    }
+    .alignWithFlexContainer {
+        width: auto;
+        margin-left: 0;
+    }
+    #aboutMeContent {
+        margin-bottom: var(--bodyPadding);
+    }
+    #aboutMeImg {
+        width: 100%;    /* calc((var(--flexContainerWidth) - 56px * 2)); */
+    }
+}
+
+
+
+
+/* phone bodyPadding */
+@media (max-width: 550px) {
+
+    :root {
+        --bodyPadding: 32px;    /* 56px */
+        --cardWidth: calc((100vw - 2 * var(--bodyPadding)) - 8px);
+    }
+
+    #helpBtn {
+        width: 56px;    /* --bodyPadding */
+        height: 56px;   /* --bodyPadding */
+        border-radius: calc(56px / 2);
+        box-shadow: 0px 0px 48px rgba(0, 0, 0, 0.1);    /* none */
+    }
+    .btnIcon {
+        width: calc(56px / 2);  /* --bodyPadding -> 56px */
+        height: calc(56px / 2);
+        top: calc(56px / 4);
+        left: calc(56px / 4);
+    }
+    #helpModal {
+        width: calc(100vw - 56px - 2 * var(--bodyPadding) - 16px);    /* 300px */
+        right: calc(56px + var(--bodyPadding) + 16px);
+        box-shadow: 0px 0px 48px rgba(0, 0, 0, 0.1);    /* none */
+    }
+
+    #aboutMeImg {
+        max-width: none;    /* 600px */
+    }
+    #aboutMeContent {
+        min-height: 0px;    /* 100% */
+        padding: 0;
+        background: none;   /* var(--cardBG) */
+    }
+}
+
+
+
+
+/* helpModal size must decrease */
+@media (max-width: 350px) {
+
+    :root {
+        --helpModalTextSize: 12pt;    /* 14pt */
+    }
+}
+
+
+
+
+/* no longer viewable */
+@media (max-width: 319px) {
+
+    * {
+        pointer-events: none;
+    }
+    body {
+        overflow: hidden;
+        filter: blur(12px);
+        transition: filter 0.2s;
+    }
+}
+
+
+
+
+@media (hover: none) {
+
+    .hoverScale:hover {
+        transform: none;
+    }
+}
