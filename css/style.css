@@ -172,16 +172,6 @@ b, strong {
     transition: opacity 0.5s;
 }
 
-#scrollMsg p {
-    margin: 20px 0px 20px 0px;
-    padding: 0;
-    font-family: 'Inter Light';
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 16px;
-    color: var(--heavyTextColor);
-}
-
 .contentHeading {
     margin-top: 8px;
     margin-bottom: 16px;

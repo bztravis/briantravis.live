@@ -17,11 +17,9 @@ function toggleScrollMsg() {
         scrollMsg.style.opacity = '1'
         // scrollMsg.style.pointerEvents = 'auto'
     // }
-    window.setTimeout(function() {
-        // downBtn.style.pointerEvents = 'auto'
+    document.querySelector('#contentContainer').addEventListener('scroll', function() {
         scrollMsg.style.opacity = '0'
-        // scrollMsg.style.pointerEvents = 'none'
-    }, 4000)
+    })
 }
 
 
