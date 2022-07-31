@@ -65,3 +65,11 @@ function copyToClipboard(text, classOrder) {
         }, 2000)
     }
 }
+
+
+
+
+function revealContentContainer() {
+    document.querySelector('#contentContainer').style.opacity = '1'
+}
+document.querySelector('#contentContainer').addEventListener('load', revealContentContainer())
