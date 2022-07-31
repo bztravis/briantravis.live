@@ -168,4 +168,6 @@ footer {
     max-width: 600px;
     display: block;
     margin: 0px auto var(--bodyPadding) auto;
+    opacity: 0;
+    transition: opacity 0.5s;
 }
