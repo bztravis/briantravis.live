@@ -84,12 +84,17 @@ document.querySelector('#contentContainer').scrollTop = 0
 
 function checkToggleDownBtn() {
     let downBtn = document.querySelector('#downBtn')
+    let scrollMsg = document.querySelector('#scrollMsg')
     let flexContainer = document.querySelector('.flexContainer')
     let contentContainer = document.querySelector('#contentContainer')
     let card = document.querySelector('.card')
     if ((flexContainer.offsetHeight - contentContainer.offsetHeight) - contentContainer.scrollTop <= card.offsetHeight) {
         downBtn.style.opacity = '0'
+        // downBtn.style.pointerEvents = 'none'
+        scrollMsg.style.opacity = '0'
+        // scrollMsg.style.pointerEvents = 'none'
     } else {
         downBtn.style.opacity = '1'
+        // downBtn.style.pointerEvents = 'auto'
     }
 }

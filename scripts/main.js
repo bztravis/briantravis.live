@@ -9,8 +9,19 @@ function downBtnScrollDown() {
 
 
 
-function showScrollMessage() {
-    
+function toggleScrollMsg() {
+    let downBtn = document.querySelector('#downBtn')
+    let scrollMsg = document.querySelector('#scrollMsg')
+    // if (window.getComputedStyle(scrollMsg).pointerEvents == 'none') {
+        downBtn.style.pointerEvents = 'none'
+        scrollMsg.style.opacity = '1'
+        // scrollMsg.style.pointerEvents = 'auto'
+    // }
+    window.setTimeout(function() {
+        // downBtn.style.pointerEvents = 'auto'
+        scrollMsg.style.opacity = '0'
+        // scrollMsg.style.pointerEvents = 'none'
+    }, 4000)
 }
 
 

@@ -89,8 +89,17 @@ footer {
     border-radius: calc(var(--bodyPadding) / 2);
     background: #ffffff;
     opacity: 0;
-    pointer-events: none;
+    /* pointer-events: none; */
     transition: opacity 0.5s;
+}
+
+#scrollMsg {
+    width: 128px;
+    height: 56px;
+    position: fixed;
+    bottom: calc(var(--bodyPadding) * 2);
+    right: calc( var(--flexContainerWidth) + var(--bodyPadding) - 8px - ((var(--cardCount) * (var(--cardWidthExact) + 8px) - 8px) / 2) - (128px / 2));
+    border-radius: calc(56px / 2);
 }
 
 .btnIcon {
