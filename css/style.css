@@ -163,6 +163,15 @@ b, strong {
     -webkit-user-drag: none;
 }
 
+#scrollMsg {
+    text-align: center;
+    margin-top: auto;
+    background: #ffffff;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s;
+}
+
 .contentHeading {
     margin-top: 8px;
     margin-bottom: 16px;

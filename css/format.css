@@ -51,6 +51,8 @@ footer {
     overflow-y: scroll;
     scrollbar-width: none;
     scroll-snap-type: y mandatory;
+    opacity: 0;
+    transition: opacity 0.5s;
 }
 
 #relativeContainer {
@@ -89,8 +91,37 @@ footer {
     border-radius: calc(var(--bodyPadding) / 2);
     background: #ffffff;
     opacity: 0;
-    pointer-events: none;
+    /* pointer-events: none; */
     transition: opacity 0.5s;
+}
+
+#scrollMsg {
+    width: 146px;
+    height: 56px;
+    position: fixed;
+    bottom: calc(var(--bodyPadding) * 2);
+    right: calc( var(--flexContainerWidth) + var(--bodyPadding) - 8px - ((var(--cardCount) * (var(--cardWidthExact) + 8px) - 8px) / 2) - (146px / 2));
+    border-radius: calc(56px / 2);
+}
+
+#scrollMsg p {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    left: 21px;
+    top: 21px;
+    font-family: 'Inter Medium';
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 14px;
+    color: var(--heavyTextColor);
+}
+
+#scrollIcon {
+    width: 14px;
+    position: absolute;
+    top: calc((56px - 21px) / 2);
+    right: 21px;
 }
 
 .btnIcon {
@@ -159,4 +190,6 @@ footer {
     max-width: 600px;
     display: block;
     margin: 0px auto var(--bodyPadding) auto;
+    opacity: 0;
+    transition: opacity 0.5s;
 }

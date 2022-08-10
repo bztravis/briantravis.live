@@ -9,8 +9,17 @@ function downBtnScrollDown() {
 
 
 
-function showScrollMessage() {
-    
+function toggleScrollMsg() {
+    let downBtn = document.querySelector('#downBtn')
+    let scrollMsg = document.querySelector('#scrollMsg')
+    // if (window.getComputedStyle(scrollMsg).pointerEvents == 'none') {
+        downBtn.style.pointerEvents = 'none'
+        scrollMsg.style.opacity = '1'
+        // scrollMsg.style.pointerEvents = 'auto'
+    // }
+    document.querySelector('#contentContainer').addEventListener('scroll', function() {
+        scrollMsg.style.opacity = '0'
+    })
 }
 
 
@@ -54,3 +63,11 @@ function copyToClipboard(text, classOrder) {
         }, 2000)
     }
 }
+
+
+
+
+function revealContentContainer() {
+    document.querySelector('#contentContainer').style.opacity = '1'
+}
+document.querySelector('#contentContainer').addEventListener('load', revealContentContainer())

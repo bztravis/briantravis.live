@@ -10,6 +10,15 @@
     <link rel="stylesheet" href="/css/format.css">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/mobile.css">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EFX80VBL6B"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-EFX80VBL6B');
+    </script>
 </head>
 <body>
     <div id="navBar">
@@ -29,15 +38,15 @@
                     <i class="footerIcon"><img src="/icons/instagram.svg"></i>
                     <h3 class="footerDetail hasIcon">@bztravis88</h3>
                 </li>
-                <li class="hoverScale" target="_blank" onclick="window.open('https://www.facebook.com/brianztravisphotography/')">
+                <!-- <li class="hoverScale" target="_blank" onclick="window.open('https://www.facebook.com/brianztravisphotography/')">
                     <i class="footerIcon"><img src="/icons/facebook.svg"></i>
                     <h3 class="footerDetail hasIcon">Brian Travis Photography</h3>
-                </li>
-                <li class="hoverScale" onclick="copyToClipboard('(616) 915-9195', 2)">
+                </li> -->
+                <li class="hoverScale" onclick="copyToClipboard('(616) 915-9195', 1)">
                     <i class="footerIcon"><img src="/icons/comment.svg"></i>
                     <h3 class="footerDetail hasIcon">(616) 915-9195</h3>
                 </li>
-                <li class="hoverScale" onclick="copyToClipboard('briantravisphotography@gmail.com', 3)">
+                <li class="hoverScale" onclick="copyToClipboard('briantravisphotography@gmail.com', 2)">
                     <i class="footerIcon"><img src="/icons/message.svg"></i>
                     <h3 class="footerDetail hasIcon">briantravisphotography@gmail.com</h3>
                 </li>
@@ -59,8 +68,12 @@
             <div class="flexContainer"></div>
         </div>
     </div>
-    <div id="downBtn" onclick="downBtnScrollDown()">
+    <div id="downBtn" onclick="toggleScrollMsg()">
         <img class="btnIcon" src="/icons/downArrow.svg">
+    </div>
+    <div id="scrollMsg">
+        <p>Scroll down</p>
+        <img id="scrollIcon" src="/icons/mouse.svg">
     </div>
     <script src="/scripts//placePhotos.js"></script>
     <script src="/scripts/format.js"></script>
