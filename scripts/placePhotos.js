@@ -1,6 +1,7 @@
 const photoConfig = [
-    [0, 10], // Summer
-    [11, 12] // Andy
+    [0, 10],    // Summer Wu
+    [11, 12],   // Andy Travis
+    [13, 14]    // Jessica Davids
 ]
 
 
