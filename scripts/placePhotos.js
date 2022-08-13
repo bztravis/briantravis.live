@@ -8,6 +8,9 @@ const photoConfig = [
 const exclude = [7, 8, 10]  // Summer Wu
 
 
+let realExclusionOrder = []
+
+
 function placePhotos() {
 
     let currentCard = 0
@@ -47,8 +50,6 @@ function placePhotos() {
 
 
     // remove cards with excluded images
-    let realExclusionOrder = []
-
     for (let exclusion = exclude.length - 1; exclusion >= 0; exclusion--) {
         let photoCards = document.getElementsByClassName('card')
         photoCards[realExclusionOrder[exclusion]].remove()
