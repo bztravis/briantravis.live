@@ -1,8 +1,11 @@
 const photoConfig = [
     [0, 10],    // Summer Wu
     [11, 12],   // Andy Travis
-    [13, 14]    // Jessica Davids
+    [13, 14],   // Jessica Davids
+    [15, 18]    // Aiden Engvall
 ]
+
+const exclude = [7, 8, 10]  // Summer Wu
 
 
 function placePhotos() {
@@ -32,10 +35,23 @@ function placePhotos() {
 
             let photoCards = document.getElementsByClassName('card')
             photoCards[currentCard].style.backgroundImage = `url('/images/portfolio/${photoName}.png')`
+
+            if (exclude.includes(photoName)) {
+                realExclusionOrder.push(currentCard)
+            }
             
             currentCard++
             range.splice(randomPhotoIndex, 1)   // remove element at index
         }
+    }
+
+
+    // remove cards with excluded images
+    let realExclusionOrder = []
+
+    for (let exclusion = exclude.length - 1; exclusion >= 0; exclusion--) {
+        let photoCards = document.getElementsByClassName('card')
+        photoCards[realExclusionOrder[exclusion]].remove()
     }
 }
 
