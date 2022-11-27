@@ -1,11 +1,17 @@
 const photoConfig = [
     [0, 10],    // Summer Wu
-    [11, 12],   // Andy Travis
-    [13, 14],   // Jessica Davids
-    [15, 18]    // Aiden Engvall
+    [100, 101],   // Andy Travis
+    [400, 401], // Ben Gates
+    [200, 206],   // Jessica Davids
+    [300, 318]  // Aiden Engvall
+    
 ]
 
-const exclude = [7, 8, 10]  // Summer Wu
+const exclude = [
+    7, 8, 10,   // Summer Wu
+    200, 201, 204, 206, // Jessica Davids
+    300, 301, 302, 303, 304, 306, 310, 311, 312, 315, 316, 317, 318    // Aiden Engvall
+]  
 
 
 let realExclusionOrder = []
