@@ -1,17 +1,19 @@
 const photoConfig = [
     [0, 10],    // Summer Wu
     [100, 101],   // Andy Travis
+    [500, 501],  // Andy Travis (2)
     [400, 401], // Ben Gates
     [200, 206],   // Jessica Davids
-    [300, 318]  // Aiden Engvall
-    
+    [300, 318],  // Aiden Engvall
+
 ]
 
 const exclude = [
     7, 8, 10,   // Summer Wu
+    501,    // Andy Travis
     200, 201, 204, 206, // Jessica Davids
-    300, 301, 302, 303, 304, 306, 310, 311, 312, 315, 316, 317, 318    // Aiden Engvall
-]  
+    300, 301, 302, 303, 304, 306, 310, 311, 312, 315, 316, 317, 318,    // Aiden Engvall
+]
 
 
 let realExclusionOrder = []
@@ -48,7 +50,7 @@ function placePhotos() {
             if (exclude.includes(photoName)) {
                 realExclusionOrder.push(currentCard)
             }
-            
+
             currentCard++
             range.splice(randomPhotoIndex, 1)   // remove element at index
         }
