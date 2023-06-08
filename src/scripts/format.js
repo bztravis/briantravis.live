@@ -5,7 +5,7 @@ function format() {
     let cardHeight = (contentContainerHeight / 2) - 4
     let cardWidth = (cardHeight / 3 * 2) + 1    // 1px for error
     let cardWidthExact = (cardHeight / 3 * 2)
-    let cardCount = Math.floor(contentContainerWidth / (cardWidth + 8)) 
+    let cardCount = Math.floor(contentContainerWidth / (cardWidth + 8))
     let flexContainerWidth = cardCount * (cardWidth + 8) + 1    // 1px for error
 
     document.documentElement.style.setProperty('--flexContainerWidth', flexContainerWidth + 'px')
@@ -24,6 +24,11 @@ function format() {
     // HOME
     if (document.getElementsByTagName('title')[0].innerText == 'Brian Travis Photography') {
         checkToggleDownBtn()
+
+        document.querySelector('#downBtn').style.opacity = "0";
+        setTimeout(() => { document.querySelector('#downBtn').style.opacity = "1"; }, 500);
+        setTimeout(() => { document.querySelector('#downBtn').style.opacity = "0"; }, 1000);
+        setTimeout(() => { document.querySelector('#downBtn').style.opacity = "1"; }, 1500);
     }
 
     // PRICING
@@ -39,18 +44,18 @@ function format() {
         if (!isMobile) {
             if ((flexContainerWidth / ((200 + 8))) < 3) {
                 flexContainer.style.flexDirection = 'column'
-                pricingCard.forEach((individualCard) => {individualCard.style.maxWidth = 'none'})
+                pricingCard.forEach((individualCard) => { individualCard.style.maxWidth = 'none' })
             } else {
                 flexContainer.style.flexDirection = 'row'
-                pricingCard.forEach((individualCard) => {individualCard.style.maxWidth = '400px'})
+                pricingCard.forEach((individualCard) => { individualCard.style.maxWidth = '400px' })
             }
         } else {
             if ((flexContainer.offsetWidth / ((200 + 8))) < 3) {
                 flexContainer.style.flexDirection = 'column'
-                pricingCard.forEach((individualCard) => {individualCard.style.maxWidth = 'none'})
+                pricingCard.forEach((individualCard) => { individualCard.style.maxWidth = 'none' })
             } else {
                 flexContainer.style.flexDirection = 'row'
-                pricingCard.forEach((individualCard) => {individualCard.style.maxWidth = '400px'})
+                pricingCard.forEach((individualCard) => { individualCard.style.maxWidth = '400px' })
             }
         }
 
@@ -60,7 +65,7 @@ function format() {
 
         let longestItemListText = document.querySelector('#longestItemListText')
         let pricingCardIndividual = document.querySelector('.pricingCard')
-        
+
         let pricingCardIndividualWidth = pricingCardIndividual.offsetWidth
         let longestItemListTextWidth = longestItemListText.offsetWidth
         let pricingItemListMargin = (pricingCardIndividualWidth - (longestItemListTextWidth + 32)) / 2 + 32
@@ -98,3 +103,4 @@ function checkToggleDownBtn() {
         // downBtn.style.pointerEvents = 'auto'
     }
 }
+window.checkToggleDownBtn = checkToggleDownBtn

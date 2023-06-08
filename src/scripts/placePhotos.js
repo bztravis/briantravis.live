@@ -1,7 +1,23 @@
 const photoConfig = [
-    [0, 10], // Summer
-    [11, 12] // Andy
+    [0, 10],    // Summer Wu
+    [100, 101],   // Andy Travis
+    [500, 501],  // Andy Travis (2)
+    [400, 401], // Ben Gates
+    [200, 206],   // Jessica Davids
+    [300, 318],  // Aiden Engvall
+    [600, 605], // Sahil Sawant
+
 ]
+
+const exclude = [
+    7, 8, 10,   // Summer Wu
+    501,    // Andy Travis
+    200, 201, 204, 206, // Jessica Davids
+    300, 301, 302, 303, 304, 306, 310, 311, 312, 315, 316, 317, 318,    // Aiden Engvall
+]
+
+
+let realExclusionOrder = []
 
 
 function placePhotos() {
@@ -30,11 +46,22 @@ function placePhotos() {
             flexContainer.appendChild(newCard)
 
             let photoCards = document.getElementsByClassName('card')
-            photoCards[currentCard].style.backgroundImage = `url('/images/portfolio/${photoName}.png')`
-            
+            photoCards[currentCard].style.backgroundImage = `url('./images/portfolio/${photoName}.png')`
+
+            if (exclude.includes(photoName)) {
+                realExclusionOrder.push(currentCard)
+            }
+
             currentCard++
             range.splice(randomPhotoIndex, 1)   // remove element at index
         }
+    }
+
+
+    // remove cards with excluded images
+    for (let exclusion = exclude.length - 1; exclusion >= 0; exclusion--) {
+        let photoCards = document.getElementsByClassName('card')
+        photoCards[realExclusionOrder[exclusion]].remove()
     }
 }
 
