@@ -1,0 +1,292 @@
+@font-face {
+  font-family: Glamour Luxury Regular;
+  src: url(../fonts/glamourluxury-Regular.ttf);
+}
+
+@font-face {
+  font-family: Glamour Luxury Round;
+  src: url(../fonts/glamourluxury-Round.ttf);
+}
+
+@font-face {
+  font-family: Inter Light;
+  src: url(../fonts/Inter-Light.ttf);
+}
+
+@font-face {
+  font-family: Inter Medium;
+  src: url(../fonts/Inter-Medium.ttf);
+}
+
+@font-face {
+  font-family: Inter Bold;
+  src: url(../fonts/Inter-Bold.ttf);
+}
+
+:root {
+  /* BG colors */
+  --bodyBG: #fafafa;
+  --cardBG: #eaeaea;
+  --modalBG: #ffffff;
+
+  /* text colors */
+  --heavyTextColor: #303030;
+  --mediumTextColor: #bababa;
+  --cardLightTextColor: #606060;
+
+  /* text sizes */
+  --titleTextSize: 36pt;
+  --navLinkTextSize: 14pt;
+  --footerDetailTextSize: 10pt;
+  --helpModalTextSize: 14pt;
+
+  /* icon sizes */
+  --footerDetailIconSize: 18px;
+
+  /* misc */
+}
+
+::selection {
+  background: var(--cardLightTextColor);
+  color: var(--bodyBG);
+}
+
+* {
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+s {
+  color: var(--mediumTextColor);
+}
+
+b,
+strong {
+  font-family: 'Inter Bold';
+  font-weight: initial;
+  font-size: inherit;
+}
+
+#titleText {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  top: -4px;
+  display: inline;
+  font-family: 'Glamour Luxury Round';
+  font-weight: normal;
+  font-size: var(--titleTextSize);
+  color: var(--heavyTextColor);
+}
+
+#titleText:hover {
+  cursor: pointer;
+}
+
+#navBar {
+  background: var(--bodyBG);
+}
+
+#navLinkList {
+  margin: 32px 0px 0px 0px;
+  padding: 0;
+  position: relative;
+  list-style: none;
+  font-family: 'Inter Light';
+  font-weight: lighter;
+  font-size: var(--navLinkTextSize);
+  z-index: 2;
+}
+
+#navLinkList > li {
+  margin: 0px 0px 12px 0px;
+}
+
+.navLink {
+  color: var(--heavyTextColor);
+  text-decoration: none;
+}
+
+#footerDetailList {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  list-style: none;
+}
+
+#footerDetailList > li {
+  /* margin-bottom: 8px; */
+  padding-bottom: 8px;
+  width: max-content;
+  position: relative;
+  transform-origin: 0% calc(50% - 4px);
+}
+
+.hoverScale:hover {
+  cursor: pointer;
+  transform: scale(1.1, 1.1);
+  transition: transform 0.2s;
+  transition-timing-function: ease-in-out;
+}
+
+.footerDetail {
+  margin: 0;
+  padding: 0;
+  display: ineline;
+  font-family: 'Inter Medium';
+  font-size: var(--footerDetailTextSize);
+  color: var(--mediumTextColor);
+  text-decoration: none;
+  font-weight: normal;
+  transition: opacity 0.2s;
+}
+
+.footerDetail.hasIcon {
+  margin: 0px 0px 0px calc(var(--footerDetailIconSize) + 8px) !important;
+}
+
+.footerIcon {
+  width: var(--footerDetailIconSize);
+  height: var(--footerDetailIconSize);
+  position: absolute;
+  bottom: calc(-1px + 8px);
+}
+
+.footerIcon > img {
+  width: var(--footerDetailIconSize);
+  display: inline;
+  -webkit-user-drag: none;
+}
+
+#scrollMsg {
+  text-align: center;
+  margin-top: auto;
+  background: #ffffff;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s;
+}
+
+.contentHeading {
+  margin-top: 8px;
+  margin-bottom: 16px;
+  font-family: 'Inter Bold';
+  font-size: 16pt;
+  font-weight: initial;
+  color: var(--heavyTextColor);
+}
+
+.contentParagraph {
+  margin-top: 0;
+  margin-bottom: 16px;
+  padding: 0;
+  font-family: 'Inter Light';
+  font-size: 12pt;
+  font-weight: initial;
+  line-height: 150%;
+  color: var(--heavyTextColor);
+}
+
+.pricingCardHeading {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: 'Glamour Luxury Regular';
+  font-weight: initial;
+  font-size: 28pt;
+}
+
+.pricingCardPrice {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: 'Glamour Luxury Regular';
+  font-weight: initial;
+  font-size: 28pt;
+}
+
+.pricingCardFooter {
+  width: 100%;
+  margin: 0;
+  padding: 0px 36px 0px 36px;
+  text-align: center;
+  font-family: 'Glamour Luxury Regular';
+  font-weight: initial;
+  font-size: 18pt;
+}
+
+.pricingCardBanner {
+  width: 100%;
+  margin: 0px 0px 24px 0px;
+  padding: 4px 8px 4px 8px;
+  text-align: center;
+  font-family: 'Inter Bold';
+  font-weight: initial;
+  font-size: 10pt;
+  background: var(--heavyTextColor);
+  color: var(--cardBG);
+}
+
+.pricingItemList {
+  margin: 24px 0px 24px 0px;
+  padding: 0;
+  list-style: none;
+  /* list-style-position: inside; */
+  text-align: left;
+}
+
+.pricingItemList > li {
+  /* margin: 0px 0px 8px 0px; */
+  margin: 0px 0px 8px var(--pricingItemListMargin);
+  position: relative;
+}
+
+.pricingItemList > li > img {
+  width: 20px;
+  position: absolute;
+  bottom: 0px;
+  left: -32px;
+}
+
+.pricingItemList > li > p {
+  margin: 0;
+  padding: 0;
+  display: inline;
+  font-family: 'Inter Light';
+  font-weight: initial;
+  font-size: 12pt;
+  color: var(--cardLightTextColor);
+}
+
+#helpModal {
+  background: #ffffff;
+  font-family: 'Inter Light';
+  font-weight: normal;
+  font-size: var(--helpModalTextSize);
+  line-height: 150%;
+  color: var(--heavyTextColor);
+}
+
+#helpModalCloseBtn {
+  width: 18px;
+  height: 18px;
+  top: 8px;
+  right: 8px;
+  position: absolute;
+}
+
+#helpModalCloseBtn:hover {
+  cursor: pointer;
+}
+
+#aboutMeContent {
+  min-height: 100%;
+  padding: var(--bodyPadding) var(--bodyPadding) calc(56px - 16px)
+    var(--bodyPadding); /* lowest inner element is .contentParagraph */
+  border-radius: var(--cardBorderRadius);
+  background: var(--cardBG);
+}

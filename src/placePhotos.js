@@ -46,7 +46,7 @@ function placePhotos() {
             flexContainer.appendChild(newCard)
 
             let photoCards = document.getElementsByClassName('card')
-            photoCards[currentCard].style.backgroundImage = `url('/images/portfolio/${photoName}.png')`
+            photoCards[currentCard].style.backgroundImage = `url('./images/portfolio/${photoName}.png')`
 
             if (exclude.includes(photoName)) {
                 realExclusionOrder.push(currentCard)

@@ -103,3 +103,4 @@ function checkToggleDownBtn() {
         // downBtn.style.pointerEvents = 'auto'
     }
 }
+window.checkToggleDownBtn = checkToggleDownBtn
