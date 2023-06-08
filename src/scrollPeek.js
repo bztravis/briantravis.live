@@ -7,7 +7,7 @@ if (!staleSession) {
   setTimeout(() => { element.style.scrollSnapType = 'y mandatory' }, 3400)
 }
 
-const easeIn = BezierEasing(0, .62, .56, 1)
+const easeIn = BezierEasing(0.2, 0, 0.4, 1)
 const fallingEase = BezierEasing(.41, .01, .63, .25)
 const bounceEase = BezierEasing(.37, .97, .87, 1)
 

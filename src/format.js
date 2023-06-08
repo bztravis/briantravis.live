@@ -23,12 +23,15 @@ function format() {
 
     // HOME
     if (document.getElementsByTagName('title')[0].innerText == 'Brian Travis Photography') {
-        checkToggleDownBtn()
+        const staleSession = sessionStorage.getItem("present");
+        if (staleSession)
+            setTimeout(() => { checkToggleDownBtn() }, 500);
+        else
+            setTimeout(() => { checkToggleDownBtn() }, 3500);
 
-        document.querySelector('#downBtn').style.opacity = "0";
-        setTimeout(() => { document.querySelector('#downBtn').style.opacity = "1"; }, 500);
-        setTimeout(() => { document.querySelector('#downBtn').style.opacity = "0"; }, 1000);
-        setTimeout(() => { document.querySelector('#downBtn').style.opacity = "1"; }, 1500);
+        setTimeout(() => {
+            document.querySelector('#contentContainer').addEventListener('scroll', checkToggleDownBtn)
+        }, 3500)
     }
 
     // PRICING
