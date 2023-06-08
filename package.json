@@ -20,5 +20,8 @@
   "devDependencies": {
     "live-server": "^1.2.2",
     "webpack-cli": "^5.1.4"
+  },
+  "dependencies": {
+    "bezier-easing": "^2.1.0"
   }
 }

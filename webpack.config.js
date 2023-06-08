@@ -6,7 +6,8 @@ module.exports = {
   entry: {
     main: './src/main.js',
     format: './src/format.js',
-    placePhotos: './src/placePhotos.js'
+    placePhotos: './src/placePhotos.js',
+    scrollPeek: './src/scrollPeek.js',
   },
   output: {
     filename: '[name].bundle.js',
