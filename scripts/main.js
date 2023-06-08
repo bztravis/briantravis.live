@@ -3,7 +3,7 @@ function downBtnScrollDown() {
     let contentContainer = document.querySelector('#contentContainer')
     let card = document.querySelector('.card')
 
-    contentContainer.scrollTop += card.offsetHeight
+    contentContainer.scrollTop += card.offsetHeight 
 }
 
 
@@ -13,11 +13,11 @@ function toggleScrollMsg() {
     let downBtn = document.querySelector('#downBtn')
     let scrollMsg = document.querySelector('#scrollMsg')
     // if (window.getComputedStyle(scrollMsg).pointerEvents == 'none') {
-    downBtn.style.pointerEvents = 'none'
-    scrollMsg.style.opacity = '1'
-    // scrollMsg.style.pointerEvents = 'auto'
+        downBtn.style.pointerEvents = 'none'
+        scrollMsg.style.opacity = '1'
+        // scrollMsg.style.pointerEvents = 'auto'
     // }
-    document.querySelector('#contentContainer').addEventListener('scroll', function () {
+    document.querySelector('#contentContainer').addEventListener('scroll', function() {
         scrollMsg.style.opacity = '0'
     })
 }
@@ -35,7 +35,6 @@ function toggleHelpModal() {
         helpModal.style.pointerEvents = 'none'
     }
 }
-window.toggleHelpModal = toggleHelpModal
 
 
 
@@ -50,21 +49,20 @@ function copyToClipboard(text, classOrder) {
     if (initialText != 'Copied to Clipboard!') {
 
         targetElement.style.opacity = 0
-        setTimeout(() => { targetElement.style.opacity = 1 }, 200)
+        setTimeout(() => {targetElement.style.opacity = 1}, 200)
 
-        setTimeout(() => { targetElement.innerText = 'Copied to Clipboard!' }, 200)
+        setTimeout(() => {targetElement.innerText = 'Copied to Clipboard!'}, 200)
 
-
+        
         setTimeout(() => {
             targetElement.style.opacity = 0
-            setTimeout(() => { targetElement.style.opacity = 1 }, 200)
-            setTimeout(() => { targetElement.innerText = initialText }, 200)
-            setTimeout(() => { targetElement.parentElement.style.pointerEvents = 'none' }, 200)
-            setTimeout(() => { targetElement.parentElement.style.pointerEvents = 'auto' }, 500)
+            setTimeout(() => {targetElement.style.opacity = 1}, 200)
+            setTimeout(() => {targetElement.innerText = initialText}, 200)
+            setTimeout(() => {targetElement.parentElement.style.pointerEvents = 'none'}, 200)
+            setTimeout(() => {targetElement.parentElement.style.pointerEvents = 'auto'}, 500)
         }, 2000)
     }
 }
-window.copyToClipboard = copyToClipboard
 
 
 
