@@ -1,5 +1,11 @@
 import BezierEasing from 'bezier-easing'
 
+const staleSession = sessionStorage.getItem("present");
+if (!staleSession) {
+  sessionStorage.setItem("present", true)
+  setTimeout(() => { window.requestAnimationFrame(step); }, 1000)
+  setTimeout(() => { element.style.scrollSnapType = 'y mandatory' }, 3400)
+}
 
 const easeIn = BezierEasing(0, .62, .56, 1)
 const fallingEase = BezierEasing(.41, .01, .63, .25)
@@ -18,25 +24,25 @@ function step(timeStamp) {
   if (previousTimeStamp !== timeStamp) {
     if (elapsed < 1500) {
       const count = easeIn(elapsed / 1500) * 100
-      console.log(count)
+      // console.log(count)
       element.style.scrollSnapType = 'none';
       element.scrollTop = count;
     }
     else if (elapsed < 1700) {
       const count = fallingEase((1700 - elapsed) / 200) * 100
-      console.log('first', count)
+      // console.log('first', count)
       element.style.scrollSnapType = 'none';
       element.scrollTop = count;
     }
     else if (elapsed < 2000) {
       const count = bounceEase((elapsed - 1700) / 300) * 20
-      console.log('second', count)
+      // console.log('second', count)
       element.style.scrollSnapType = 'none';
       element.scrollTop = count;
     }
     else if (elapsed < 2300) {
       const count = bounceEase((2300 - elapsed) / 300) * 20
-      console.log('third', count)
+      // console.log('third', count)
       element.style.scrollSnapType = 'none';
       element.scrollTop = count;
     }
@@ -50,5 +56,4 @@ function step(timeStamp) {
 }
 
 
-setTimeout(() => { window.requestAnimationFrame(step); }, 1000)
-setTimeout(() => { element.style.scrollSnapType = 'y mandatory' }, 3400)
+
