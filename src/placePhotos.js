@@ -42,11 +42,24 @@ function placePhotos() {
 
             let flexContainer = document.getElementsByClassName('flexContainer')[0]
             let newCard = document.createElement('div')
+            let newCardImage = document.createElement('img')
+            newCard.appendChild(newCardImage)
+            newCardImage.classList.add('cardImage')
             newCard.classList.add('card')
             flexContainer.appendChild(newCard)
 
             let photoCards = document.getElementsByClassName('card')
-            photoCards[currentCard].style.backgroundImage = `url('./images/portfolio/${photoName}.png')`
+            photoCards[currentCard].style.backgroundImage = `url('./images/small/${photoName}.png')`
+
+            let photoCardImages = document.getElementsByClassName('cardImage')
+            photoCardImages[currentCard].setAttribute('src', `./images/portfolio/${photoName}.png`)
+            photoCardImages[currentCard].setAttribute('loading', 'lazy')
+            photoCardImages[currentCard].classList.add('cardImage')
+            photoCardImages[currentCard].addEventListener('load', (e) => {
+                e.target.classList.add('loaded')
+            })
+            // if (photoCardImages[currentCard].complete)
+            //     photoCardImages[currentCard].classList.add('loaded')
 
             if (exclude.includes(photoName)) {
                 realExclusionOrder.push(currentCard)
